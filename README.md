@@ -31,6 +31,10 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 - Create the following dirs: `~/.vim/backups`, `~/.vim/undo`, `~/.vim/swaps`.
 - [Vimplug](https://github.com/junegunn/vim-plug#usage)
 
+#### SublimeText
+- install [package control](https://packagecontrol.io/installation).
+- use `advance install` from command palette to install the necessary packages simultantiously: `Emmet, SublimeLinter, SideBarEnhancements, BracketHighlighter, SublimeCodeIntel, AlignTab, AdvancedNewFile, GitGutter, DocBlockr, WordPress, Laravel Blade Highlighter, SublimeLinter-php, Theme - Spaceblack, Theme - Spacegray`.
+
 ### Theme & Icons
 - [Vertex Icons](https://github.com/horst3180/Vertex-Icons)
 - [Arc Theme](https://github.com/horst3180/Arc-theme)
