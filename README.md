@@ -31,3 +31,9 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 - [Arc Theme](https://github.com/horst3180/Arc-theme)
 
 ## References
+
+
+## Files to link
+- `~/.config/xfce4/terminal/terminalrc`
+- `~/.config/fish/config.fish`
+- `~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings`
