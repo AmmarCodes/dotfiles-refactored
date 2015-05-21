@@ -18,7 +18,11 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 - git
 - fish
 - openssh
-- 
+- tmux
+
+#### Misc
+- google-chrome
+- skype
 
 #### Development
 
