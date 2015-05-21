@@ -34,6 +34,16 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 
 
 ## Files to link
+- `~/.vimrc`
+- `~/.tmux.conf`
+- `~/.Xresources`
+- `~/.gitconfig`
+- `~/.gitignore`
+- `~/.gitmessage`
+- `~/.toprc`
+- `~/.zshrc`
+- `~/.i3/`
+- `~/.xinitrc`
 - `~/.config/xfce4/terminal/terminalrc`
 - `~/.config/fish/config.fish`
 - `~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings`
