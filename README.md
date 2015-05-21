@@ -9,7 +9,13 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 - [ ] ability to save files inside multi-level folders
 - [ ] choose what to copy/link from dotfiles into home
 
-## Theme & Icons
+## Setup
+
+### Additional
+- [Vimplug](https://github.com/junegunn/vim-plug#usage)
+
+
+### Theme & Icons
 - [Vertex Icons](https://github.com/horst3180/Vertex-Icons)
 - [Arc Theme](https://github.com/horst3180/Arc-theme)
 
