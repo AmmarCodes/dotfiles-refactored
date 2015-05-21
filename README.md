@@ -11,9 +11,20 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 
 ## Setup
 
-### Additional
-- [Vimplug](https://github.com/junegunn/vim-plug#usage)
+### Programs
 
+#### Base
+
+#### Development
+
+- Sublime
+- Vim
+
+### Additional Config
+
+#### VIM
+- Create the following dirs: `~/.vim/backups`, `~/.vim/undo`, `~/.vim/swaps`.
+- [Vimplug](https://github.com/junegunn/vim-plug#usage)
 
 ### Theme & Icons
 - [Vertex Icons](https://github.com/horst3180/Vertex-Icons)
