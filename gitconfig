@@ -1,0 +1,11 @@
+[user]
+    email = am.alakkad@gmail.com
+    name = Ammar Alakkad
+[push]
+    default = simple
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore
+[commit]
+    template = ~/.gitmessage
+
