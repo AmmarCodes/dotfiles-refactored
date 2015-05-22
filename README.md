@@ -33,6 +33,7 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 - NodeJS (with npm)
 - PHP
 - Composer
+- MariaDB
 
 ### Additional Config
 
