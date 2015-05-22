@@ -31,9 +31,7 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 - Sublime
 - Vim
 - NodeJS (with npm)
-- PHP
-- Composer
-- MariaDB
+- PHP, Composer and MariaDB `sudo pacman -S php php-composer php-mcrypt php-pear php-sqlite mariadb`
 
 ### Additional Config
 
