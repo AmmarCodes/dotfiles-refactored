@@ -31,7 +31,7 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 - Sublime
 - Vim
 - NodeJS (with npm)
-- PHP, Composer and MariaDB `sudo pacman -S php php-composer php-mcrypt php-pear php-sqlite mariadb`
+- PHP, Composer and MariaDB `sudo pacman -S php php-composer php-mcrypt php-pear php-sqlite mariadb`, install mariadb by `sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql`, then `mysql_secure_installation`.
 
 ### Additional Config
 
