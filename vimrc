@@ -177,7 +177,7 @@ let NERDSpaceDelims=1 " add space between comment delimiter and first  character
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = "▲"
 let g:syntastic_php_phpcs_post_args = " --encoding=utf-8"
-let g:syntastic_php_phpcs_post_args .= " --standard=PSR2"
+let g:syntastic_php_phpcs_post_args .= " --config=~/.php_cs"
 
 " xolox/vim-easytags settings
 set tags=~/.vimtags " Where to look for tags files
