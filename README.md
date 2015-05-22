@@ -23,13 +23,22 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 #### Misc
 - google-chrome
 - skype
+- uget
+- scudcloud (Slack linux client)
 
 #### Development
 
 - Sublime
 - Vim
+- NodeJS (with npm)
+- PHP, Composer and MariaDB `sudo pacman -S php php-composer php-mcrypt php-pear php-sqlite mariadb`, install mariadb by `sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql`, then `mysql_secure_installation`.
 
 ### Additional Config
+
+#### PHP
+
+- Enable extensions by editing `/etc/php/php.ini`: curl, mysqli, posix, pdo_mysql, pdo_sqlite, sqlite3, openssl.
+- Enter default date timezone in `/etc/php/php.ini`; `Asia/Damascus`.
 
 #### VIM
 - Create the following dirs: `~/.vim/backups`, `~/.vim/undo`, `~/.vim/swaps`.
