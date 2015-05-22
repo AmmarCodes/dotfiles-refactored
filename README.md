@@ -37,7 +37,7 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 
 #### PHP
 
-- Enable extensions by editing `/etc/php/php.ini`: curl, mysqli, posix, pdo_mysql, pdo_sqlite.
+- Enable extensions by editing `/etc/php/php.ini`: curl, mysqli, posix, pdo_mysql, pdo_sqlite, openssl.
 - Enter default date timezone in `/etc/php/php.ini`; `Asia/Damascus`.
 
 #### VIM
