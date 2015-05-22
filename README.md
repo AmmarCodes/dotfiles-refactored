@@ -35,6 +35,11 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 
 ### Additional Config
 
+#### PHP
+
+- Enable extensions by editing `/etc/php/php.ini`: curl, mysqli, posix, pdo_mysql, pdo_sqlite.
+- Enter default date timezone in `/etc/php/php.ini`; `Asia/Damascus`.
+
 #### VIM
 - Create the following dirs: `~/.vim/backups`, `~/.vim/undo`, `~/.vim/swaps`.
 - [Vimplug](https://github.com/junegunn/vim-plug#usage)
