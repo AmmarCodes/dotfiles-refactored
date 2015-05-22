@@ -23,11 +23,15 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 #### Misc
 - google-chrome
 - skype
+- uget
 
 #### Development
 
 - Sublime
 - Vim
+- NodeJS (with npm)
+- PHP
+- Composer
 
 ### Additional Config
 
