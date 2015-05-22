@@ -24,6 +24,7 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 - google-chrome
 - skype
 - uget
+- scudcloud (Slack linux client)
 
 #### Development
 
