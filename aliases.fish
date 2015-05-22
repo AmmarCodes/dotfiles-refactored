@@ -16,6 +16,7 @@ alias vss 'vagrant status'
 
 # Git
 alias g 'git'
+alias ga 'git add'
 alias gl "git log --pretty=format:'%h - %an, %ar : %s'"
 alias gg 'git log --oneline --graph --decorate --color'
 alias gst 'git status'
