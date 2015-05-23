@@ -16,7 +16,7 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 #### Base
 
 - git
-- fish
+- fish (`fish-shell-git` not `fish`), with [fishmarks](https://github.com/techwizrd/fishmarks).
 - openssh
 - tmux
 
