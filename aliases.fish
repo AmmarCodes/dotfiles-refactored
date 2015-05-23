@@ -1,17 +1,11 @@
 # Misc
 alias ll 'ls -alh'
-alias subl 'subl3'
-alias sub 'subl3'
-
-alias tmux 'tmux -2'
-alias tm 'tmux -u2'
 
 # Vagrant
 alias vu 'vagrant up'
 alias vs 'vagrant ssh'
 alias vh 'vagrant halt'
 alias vss 'vagrant status'
-
 
 # Git
 alias g 'git'
