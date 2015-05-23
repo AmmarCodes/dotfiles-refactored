@@ -31,7 +31,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/syntastic'
 Plug 'shawncplus/phpcomplete.vim', {'for': 'php'}
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
-Plug 'spf13/PIV', {'for': 'php'}
+" Plug 'spf13/PIV', {'for': 'php'}
 Plug 'xsbeats/vim-blade', {'for': 'php'}
 Plug 'sudar/vim-wordpress-snippets', {'for': 'php'}
 Plug 'dsawardekar/wordpress.vim', {'for': 'php'}
@@ -176,6 +176,7 @@ let NERDSpaceDelims=1 " add space between comment delimiter and first  character
 " Syntastic
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = "▲"
+let g:syntastic_php_checkers = ['php', 'phpcs']
 let g:syntastic_php_phpcs_post_args = " --encoding=utf-8"
 let g:syntastic_php_phpcs_post_args .= " --config=~/.php_cs"
 
@@ -212,7 +213,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \: "\<TAB>"
 
 " PIV
-let g:DisableAutoPHPFolding = 1
+" let g:DisableAutoPHPFolding = 1
 
 
 " Key binding
