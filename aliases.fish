@@ -1,5 +1,4 @@
 # Misc
-alias l 'ls'
 alias ll 'ls -alh'
 alias subl 'subl3'
 alias sub 'subl3'
