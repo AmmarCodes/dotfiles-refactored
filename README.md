@@ -19,6 +19,7 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 - fish (`fish-shell-git` not `fish`), with [fishmarks](https://github.com/techwizrd/fishmarks).
 - openssh
 - tmux
+- [lighthouse](https://github.com/emgram769/lighthouse); `yoaurt -S lighthouse-git`
 
 #### Misc
 - google-chrome
@@ -47,6 +48,9 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 #### SublimeText
 - install [package control](https://packagecontrol.io/installation).
 - use `advance install` from command palette to install the necessary packages simultantiously: `Emmet, SublimeLinter, SideBarEnhancements, BracketHighlighter, SublimeCodeIntel, AlignTab, AdvancedNewFile, GitGutter, DocBlockr, WordPress, Laravel Blade Highlighter, SublimeLinter-php, Theme - Spaceblack, Theme - Spacegray`.
+
+#### Others
+- add key binding for `lighthouse | sh`, e.g. `Alt + R`
 
 ### Theme & Icons
 - [Vertex Icons](https://github.com/horst3180/Vertex-Icons)
