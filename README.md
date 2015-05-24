@@ -16,7 +16,7 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 #### Base
 
 - git
-- fish (`fish-shell-git` not `fish`), with [fishmarks](https://github.com/techwizrd/fishmarks).
+- zsh, with [prezto](https://github.com/sorin-ionescu/prezto).
 - openssh
 - tmux
 - [lighthouse](https://github.com/emgram769/lighthouse); `yoaurt -S lighthouse-git`
