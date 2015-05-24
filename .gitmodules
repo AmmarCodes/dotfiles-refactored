@@ -1,0 +1,6 @@
+[submodule "zsh-plugins/zsh-notify"]
+	path = zsh-plugins/zsh-notify
+	url = https://github.com/marzocchi/zsh-notify
+[submodule "zsh-plugins/zshmarks"]
+	path = zsh-plugins/zshmarks
+	url = git@github.com:jocelynmallon/zshmarks.git
