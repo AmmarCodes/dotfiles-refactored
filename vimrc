@@ -92,9 +92,9 @@ set encoding=utf-8
 scriptencoding utf-8
 
 " Manual Status line
-let &statusline  = "%#StatusLineNC# %{getcwd()==$HOME?'~':fnamemodify(getcwd(), ':t')}%* "
-let &statusline .= "%f"
-let &statusline .= "%#StatusLineNC#%{StatuslineGit()}%* "
+let &statusline  = "%#StatusLineNC# %{getcwd()==$HOME?'~':fnamemodify(getcwd(), ':t')} %* "
+let &statusline .= "%f "
+let &statusline .= "%#StatusLineNC#%{StatuslineGit()} %* "
 let &statusline .= '%1*%{&modified && !&readonly?"\u25cf":""}%*'
 let &statusline .= '%1*%{&modified && &readonly?"\u25cb":""}%*'
 let &statusline .= '%2*%{&modifiable?"":"\u25cb"}%*'
