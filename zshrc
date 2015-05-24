@@ -17,13 +17,4 @@ source "$HOME/dotfiles/zsh-plugins/zsh-notify/notify.plugin.zsh"
 source "$HOME/dotfiles/zsh-plugins/zshmarks/zshmarks.plugin.zsh"
 
 # Aliases
-## git
-alias gst="git status -s"
-alias ga="git add"
-## zshmarks
-
-alias g="jump"
-alias s="bookmark"
-alias d="deletemark"
-alias p="showmarks"
-alias l="showmarks"
+source "$HOME/dotfiles/aliases.zsh"
