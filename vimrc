@@ -5,7 +5,8 @@ Plug 'tpope/vim-sensible'
 Plug 'Raimondi/delimitMate'
 
 " Colorscheme
-Plug 'flazz/vim-colorschemes'
+" Plug 'flazz/vim-colorschemes'
+Plug 'nanotech/jellybeans.vim'
 
 " Editing
 Plug 'godlygeek/tabular'
@@ -54,7 +55,7 @@ syntax enable
 set t_Co=256
 set background=dark
 
-colorscheme hybrid
+colorscheme jellybeans
 
 " Set local directories
 "----------------------
