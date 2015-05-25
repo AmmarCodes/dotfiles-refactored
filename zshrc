@@ -18,3 +18,6 @@ source "$HOME/dotfiles/zsh-plugins/zshmarks/zshmarks.plugin.zsh"
 
 # Aliases
 source "$HOME/dotfiles/aliases.zsh"
+
+# PATH
+export PATH=$PATH:/$HOME/.composer/vendor/bin:.vendor/bin/:.
