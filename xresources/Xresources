@@ -1,0 +1,68 @@
+!-------------------------------------------------------------------------------
+! Xft settings
+!-------------------------------------------------------------------------------
+
+Xft.dpi:                    96
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+
+!-------------------------------------------------------------------------------
+! URxvt settings
+! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
+! More info at:
+! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
+!-------------------------------------------------------------------------------
+
+URxvt.depth:                32
+URxvt.geometry:             165x35
+URxvt.transparent:          false
+URxvt.fading:               0
+! URxvt.urgentOnBell:         true
+! URxvt.visualBell:           true
+URxvt.loginShell:           true
+URxvt.saveLines:            50
+URxvt.internalBorder:       0
+URxvt.lineSpace:            3
+URxvt.iconFile:             /usr/share/icons/Numix-Circle/scalable/apps/terminal.svg
+URxvt.title:                Terminal
+
+! Fonts
+URxvt.allow_bold:           false
+/* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
+URxvt*font: xft:Droid Sans Mono:pixelsize=14:antialias=false:hinting:true,xft:DejaVu Sans Mono:size=15:antialias=false:hinting=true
+URxvt.font-size.zoomfont: xft:Droid Sans Mono:pixelsize=12
+URxvt.font-size.step: 2
+URxvt.keysym.C-Up:   perl:font-size:increase
+URxvt.keysym.C-Down: perl:font-size:decrease
+URxvt.keysym.C-Left: perl:font-size:reset
+
+! Fix font space
+URxvt*letterSpace: 1
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+! Perl extensions
+Urxvt*perl-lib:        /usr/lib/urxvt/perl/
+URxvt.perl-ext-common:      default,matcher,fullscreen,font-size
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          firefox
+! Fullscreen switch
+URxvt.keysym.F11:       perl:fullscreen:switch
+
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #657b83
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         true
+urxvt*internalBorder: 5
+URxvt*dynamicColors: on
+URxvt*keysym.Home: \033[1~
+URxvt*keysym.End: \033[4~
+
+#include "/home/ammar/dotfiles/xresources/colorschemes/XresourceTomorrowNightEighties"
