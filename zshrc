@@ -21,3 +21,7 @@ source "$HOME/dotfiles/aliases.zsh"
 
 # PATH
 export PATH=$PATH:/$HOME/.composer/vendor/bin:.vendor/bin/:.
+
+# Base16 Shell
+BASE16_SHELL="$HOME/dotfiles/base16-shell/base16-eighties.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
