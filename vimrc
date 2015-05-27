@@ -6,7 +6,8 @@ Plug 'Raimondi/delimitMate'
 
 " Colorscheme
 " Plug 'flazz/vim-colorschemes'
-Plug 'nanotech/jellybeans.vim'
+" Plug 'nanotech/jellybeans.vim'
+Plug 'chriskempson/base16-vim'
 
 " Editing
 Plug 'godlygeek/tabular'
@@ -55,7 +56,8 @@ syntax enable
 set t_Co=256
 set background=dark
 
-colorscheme jellybeans
+let g:base16colorspace=256
+colorscheme base16-eighties
 
 " Set local directories
 "----------------------
