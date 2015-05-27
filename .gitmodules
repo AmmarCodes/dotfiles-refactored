@@ -4,3 +4,6 @@
 [submodule "zsh-plugins/zshmarks"]
 	path = zsh-plugins/zshmarks
 	url = git@github.com:jocelynmallon/zshmarks.git
+[submodule "base16-shell"]
+	path = base16-shell
+	url = git@github.com:chriskempson/base16-shell.git
