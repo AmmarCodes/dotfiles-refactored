@@ -18,7 +18,7 @@ ln -s ~/dotfiles/zpreztorc ~/.zpreztorc
 ln -s ~/dotfiles/.urxvt/ ~
 ln -s ~/dotfiles/gtkrc ~/.gtkrc-2.0
 ln -s ~/dotfiles/i3/config ~/.config/i3/config
-mkdir ~/config/dunst
+mkdir ~/.config/dunst
 ln -s ~/dotfiles/dunst/dunstrc ~/.config/dunst/dunstrc
 ln -s ~/dotfiles/.compton.conf ~/.compton.conf
 ln -s ~/dotfiles/i3blocks.conf ~/.i3blocks.conf
