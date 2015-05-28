@@ -17,4 +17,8 @@ ln -s ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/zprofile ~/.zprofile
 ln -s ~/dotfiles/zpreztorc ~/.zpreztorc
 ln -s ~/dotfiles/.urxvt/ ~
+ln -s ~/dotfiles/i3/config ~/.config/i3/config
+ln -s ~/dotfiles/dunst/dunstrc ~/.config/dunst/dunstrc
+ln -s ~/dotfiles/.compton.conf ~/.compton.conf
+ln -s ~/dotfiles/i3blocks.conf ~/.i3blocks.conf
 ln -s ~/dotfiles/xresources/Xresources ~/.Xresources
