@@ -19,7 +19,7 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 - zsh, with [prezto](https://github.com/sorin-ionescu/prezto).
 - openssh
 - tmux
-- i3-gaps-git i3blocks dmenu dunst compton feh
+- i3-gaps-git i3blocks dmenu dunst compton feh acpi sysstat
 
 #### Misc
 - google-chrome
