@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 " Basic stuff
 Plug 'tpope/vim-sensible'
 Plug 'Raimondi/delimitMate'
+Plug 'pbrisbin/vim-mkdir'
 
 " Colorscheme
 " Plug 'flazz/vim-colorschemes'
