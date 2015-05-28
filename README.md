@@ -19,7 +19,7 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 - zsh, with [prezto](https://github.com/sorin-ionescu/prezto).
 - openssh
 - tmux
-- [lighthouse](https://github.com/emgram769/lighthouse); `yoaurt -S lighthouse-git`
+- i3-gaps-git i3blocks dunst compton
 
 #### Misc
 - google-chrome

@@ -12,7 +12,6 @@ ln -s ~/dotfiles/gitignore ~/.gitignore
 ln -s ~/dotfiles/gitmessage ~/.gitmessage
 ln -s ~/dotfiles/config.fish ~/.config/fish/config.fish
 ln -s ~/dotfiles/php_cs ~/.php_cs
-ln -s ~/dotfiles/lighthouse ~/.config/
 ln -s ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/zprofile ~/.zprofile
 ln -s ~/dotfiles/zpreztorc ~/.zpreztorc
