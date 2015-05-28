@@ -206,8 +206,8 @@ bindsym Mod1+e  exec --no-startup-id thunar
 
 # gaps config here
 
-set $default_gaps_inner 10
-set $default_gaps_outer 20
+set $default_gaps_inner 8
+set $default_gaps_outer 8
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
 
