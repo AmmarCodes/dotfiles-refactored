@@ -16,6 +16,7 @@ ln -s ~/dotfiles/zshrc ~/.zshrc
 ln -s ~/dotfiles/zprofile ~/.zprofile
 ln -s ~/dotfiles/zpreztorc ~/.zpreztorc
 ln -s ~/dotfiles/.urxvt/ ~
+ln -s ~/dotfiles/gtkrc ~/.gtkrc-2.0
 ln -s ~/dotfiles/i3/config ~/.config/i3/config
 mkdir ~/config/dunst
 ln -s ~/dotfiles/dunst/dunstrc ~/.config/dunst/dunstrc
