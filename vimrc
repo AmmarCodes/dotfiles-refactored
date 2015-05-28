@@ -94,6 +94,7 @@ set wildignore+=*/vendor/**,*/wordpress/**,*/node_modules/**,*/nbproject/**
 set nofoldenable " disable folding
 set encoding=utf-8
 scriptencoding utf-8
+set pastetoggle=<F2> " paste toggle
 
 " Manual Status line
 let &statusline  = "%#StatusLineNC# %{getcwd()==$HOME?'~':fnamemodify(getcwd(), ':t')} %* "
