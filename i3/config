@@ -4,7 +4,6 @@ set $mod Mod4
 
 set $dir ~/dotfiles/i3/
 
-
 # Colors
 
 set $black       #2c2836
@@ -26,10 +25,6 @@ set $darkwhite   #f1edfb
 set $background  #133B47
 
 #                       BORDER     BACKGROUND TEXT   INDICATOR
-client.focused          $cyan      $cyan      $white $cyan
-client.unfocused        $darkcyan  $darkcyan  $white $darkcyan
-client.focused_inactive $darkcyan  $darkcyan  $white $darkcyan
-client.urgent           $red       $red       $white $red
 
 
 
@@ -149,26 +144,26 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+    # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+    # Pressing left will shrink the window’s width.
+    # Pressing right will grow the window’s width.
+    # Pressing up will shrink the window’s height.
+    # Pressing down will grow the window’s height.
+    bindsym j resize shrink width 10 px or 10 ppt
+    bindsym k resize grow height 10 px or 10 ppt
+    bindsym l resize shrink height 10 px or 10 ppt
+    bindsym semicolon resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+    # same bindings, but for the arrow keys
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -176,24 +171,22 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        # If you want to keep the bar hidden un-comment the next 3 lines
-        # mode hide
-        # hidden_state hide
-        # modifier $mod
-        status_command i3blocks
-        position top
-        separator_symbol "|"
-        colors {
-                statusline         $white
-                background         $background
-                separator          $cyan
-
-                #                  BORDER      BACKGROUND  TEXT
-                focused_workspace  $background $background $cyan
-                inactive_workspace $background $background $white
-                active_workspace   $background $background $white
-                urgent_workspace   $red        $red        $white
-        }
+  # If you want to keep the bar hidden un-comment the next 3 lines
+    # mode hide
+    # hidden_state hide
+    # modifier $mod
+    status_command i3blocks
+    position top
+    separator_symbol "|"
+  colors {
+  separator #AAAAAA
+  background #1f2326
+  statusline #FFFFFF
+  focused_workspace #9FCA56 #9FCA56 #151718
+  active_workspace #DCCD69 #DCCD69 #151718
+  inactive_workspace #1f2326 #1f2326 #AAAAAA
+  urgent_workspace #CE4045 #CE4045 #FFFFFF
+  }
 }
 
 workspace_auto_back_and_forth yes
@@ -224,48 +217,46 @@ set $mode_gaps_inner Inner Gaps: +|-|d|0 (local), Shift + +|-|d|0 (global)
 bindsym $mod+Shift+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
+    bindsym o      mode "$mode_gaps_outer"
+    bindsym i      mode "$mode_gaps_inner"
 
-        bindsym 0      mode "default", exec --no-startup-id i3-msg "gaps inner current set 0" && i3-msg "gaps outer current set 0"
-        bindsym d      mode "default", exec --no-startup-id i3-msg "gaps inner current set $default_gaps_inner" && i3-msg "gaps outer current set $default_gaps_outer"
+    bindsym 0      mode "default", exec --no-startup-id i3-msg "gaps inner current set 0" && i3-msg "gaps outer current set 0"
+    bindsym d      mode "default", exec --no-startup-id i3-msg "gaps inner current set $default_gaps_inner" && i3-msg "gaps outer current set $default_gaps_outer"
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     mode "default", gaps inner current set 0
-        bindsym d     mode "default", gaps inner current set $default_gaps_inner
+    bindsym plus  gaps inner current plus 5
+    bindsym minus gaps inner current minus 5
+    bindsym 0     mode "default", gaps inner current set 0
+    bindsym d     mode "default", gaps inner current set $default_gaps_inner
 
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     mode "default", gaps inner all set 0
-        bindsym Shift+d     mode "default", gaps inner all set $default_gaps_inner
+    bindsym Shift+plus  gaps inner all plus 5
+    bindsym Shift+minus gaps inner all minus 5
+    bindsym Shift+0     mode "default", gaps inner all set 0
+    bindsym Shift+d     mode "default", gaps inner all set $default_gaps_inner
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     mode "default", gaps outer current set 0
-        bindsym d     mode "default", gaps outer current set $default_gaps_outer
+    bindsym plus  gaps outer current plus 5
+    bindsym minus gaps outer current minus 5
+    bindsym 0     mode "default", gaps outer current set 0
+    bindsym d     mode "default", gaps outer current set $default_gaps_outer
 
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
-        bindsym Shift+0     mode "default", gaps outer all set 0
-        bindsym Shift+d     mode "default", gaps outer all set $default_gaps_outer
+    bindsym Shift+plus  gaps outer all plus 5
+    bindsym Shift+minus gaps outer all minus 5
+    bindsym Shift+0     mode "default", gaps outer all set 0
+    bindsym Shift+d     mode "default", gaps outer all set $default_gaps_outer
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
-
 new_window none
-
 
 # dialogs
 for_window [class="(?i)gsimplecal"] floating enable
@@ -279,7 +270,7 @@ for_window [class="(?i)VirtualBox"] floating enable
 
 # Exit
 
-# bindsym $mod+Shift+E exec ~/dotfiles/i3/i3-exit
+# bindsym $mod+Shift+E exec $dir/i3-exit
 # bindsym XF86PowerOff exec $dir/i3-exit
 
 # Lock the screen using slimlock
@@ -304,3 +295,9 @@ exec --no-startup-id setxkbmap -layout us,ar -option grp:alt_shift_toggle
 exec --no-startup-id compton -b --config ~/.compton.conf &
 # Set the wallpaper
 exec_always --no-startup-id feh --bg-center $HOME/dotfiles/wallpapers/current
+
+# Colorscheme - set using i3-style seti
+client.focused #4F99D3 #4F99D3 #151718 #9FCA56
+client.focused_inactive #9FCA56 #9FCA56 #151718 #A074C4
+client.unfocused #1f2326 #1f2326 #AAAAAA #A074C4
+client.urgent #CE4045 #CE4045 #FFFFFF #DCCD69
