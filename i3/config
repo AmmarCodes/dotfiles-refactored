@@ -268,10 +268,21 @@ for_window [class="(?i)gsimplecal"] floating enable
 for_window [class="(?i)qemu-system"] floating enable
 for_window [class="(?i)VirtualBox"] floating enable
 
-# Exit
+# System Mode - Exit
+bindsym $mod+x mode "$mode_system"
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (x) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id ~/dotfiles/i3/i3-exit lock, mode "default"
+    bindsym e exec --no-startup-id ~/dotfiles/i3/i3-exit logout, mode "default"
+    bindsym s exec --no-startup-id ~/dotfiles/i3/i3-exit suspend, mode "default"
+    bindsym h exec --no-startup-id ~/dotfiles/i3/i3-exit hibernate, mode "default"
+    bindsym r exec --no-startup-id ~/dotfiles/i3/i3-exit reboot, mode "default"
+    bindsym x exec --no-startup-id ~/dotfiles/i3/i3-exit shutdown, mode "default"
 
-# bindsym $mod+Shift+E exec $dir/i3-exit
-# bindsym XF86PowerOff exec $dir/i3-exit
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
 
 # Lock the screen using slimlock
 bindsym Mod1+Ctrl+l exec slimlock
