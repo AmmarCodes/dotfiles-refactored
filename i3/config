@@ -275,6 +275,8 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
+# Toggle compton opacity
+bindsym $mod+Shift+F11 exec ~/dotfiles/bin/compton_opacity_toggle
 
 # Lock the screen using slimlock
 bindsym Mod1+Ctrl+l exec slimlock
