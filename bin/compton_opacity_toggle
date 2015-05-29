@@ -1,0 +1,27 @@
+#!/bin/bash
+
+##########################
+# Toggle compton opacity #
+# ---------------------- #
+#                        #
+# Author: Ammar Alakkad  #
+# http://aalakkad.me     #
+##########################
+
+# save current compton process args for later
+condition_test=`ps -aux | grep -e "compton -i" | grep -v "grep" | wc -l`
+
+# First, kill current compton instance
+`killall -9 compton`
+# check if compton process was having -i option
+if [[ condition_test -gt 0 ]]; then
+    echo "compton -i exists"
+    # run compton in the background
+    # nohup is to detach compton process from the parent, run it as daemon
+    `nohup compton -b > /dev/null &`
+else
+    echo "compton -i doesnt exists"
+    # run compton in the background
+    # nohup is to detach compton process from the parent, run it as daemon
+    `nohup compton -i -b > /dev/null &`
+fi
