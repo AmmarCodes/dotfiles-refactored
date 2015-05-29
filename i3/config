@@ -280,12 +280,17 @@ bindsym Mod1+Ctrl+l exec slimlock
 bindsym $mod+Shift+y exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
 
 # Pulse audio volume control
+bindsym $mod+F12 exec amixer -D pulse sset Master '5%+'
+bindsym $mod+F11 exec amixer -D pulse sset  Master '5%-'
 # bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume 0 -- '-5%'
 # bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume 0 -- '+5%'
 # bindsym XF86AudioMute exec /usr/bin/pactl set-sink-volume 0 0
+
 # # Screen brightness
-bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 5
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+
+
 
 # Network Applet
 exec --no-startup-id nm-applet &
