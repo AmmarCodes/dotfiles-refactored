@@ -186,10 +186,6 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym Mod1+Tab focus right
 bindsym Mod1+Shift+Tab focus left
 
-bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/volume_control.py down 5
-bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/volume_control.py up 5
-bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/volume_control.py toggle
-
 # screenshot
 bindsym --release Print exec scrot $HOME/Pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png
 
@@ -285,11 +281,9 @@ bindsym Mod1+Ctrl+l exec slimlock
 bindsym $mod+Shift+y exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
 
 # Pulse audio volume control
-bindsym $mod+F12 exec amixer -D pulse sset Master '5%+'
-bindsym $mod+F11 exec amixer -D pulse sset  Master '5%-'
-# bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume 0 -- '-5%'
-# bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume 0 -- '+5%'
-# bindsym XF86AudioMute exec /usr/bin/pactl set-sink-volume 0 0
+bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master '5%-'
+bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master '5%+'
+bindsym XF86AudioMute exec /usr/bin/pactl set-sink-volume 0 0
 
 # # Screen brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
