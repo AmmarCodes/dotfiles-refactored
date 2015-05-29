@@ -47,9 +47,11 @@ URxvt.scrollBar:            false
 
 ! Perl extensions
 Urxvt*perl-lib:        /usr/lib/urxvt/perl/
-URxvt.perl-ext-common:      default,matcher,fullscreen,font-size
+URxvt.perl-ext-common:      default,matcher,fullscreen,font-size,clipboard
 URxvt.matcher.button:       1
 URxvt.urlLauncher:          firefox
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 ! Fullscreen switch
 URxvt.keysym.F11:       perl:fullscreen:switch
 
