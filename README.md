@@ -1,13 +1,20 @@
 # dotfiles-refactored
 
-A refactored version of my dotfiles, don't overwrite any files/folders.
+A refactored version of my dotfiles, don't overwrite any files/folders. Currently running i3-gaps.
 
-## Features
+![Clean Desktop](https://i.imgur.com/IN9AcJ5.png)
+[More screenshots](https://imgur.com/gallery/eqG9N/).
 
-- [ ] list of packages to install
-- [ ] ability to save the background image
-- [ ] ability to save files inside multi-level folders
-- [ ] choose what to copy/link from dotfiles into home
+## Key bindings
+
+Other than default i3 key bindings, There's:
+
+- `$mod`+`tab`: switch workspaces
+- `alt`+`tab`: focus next panel
+- `alt`+`shift`+`tab`: focus previous panel
+- `$mod`+`shift`+`F11`: toggle compton opacity
+- `alt`+`ctrl`+`L`: lock the screen (using slimlock)
+- `$mod`+`shift`+`y`: rename workspace
 
 ## Setup
 
@@ -56,20 +63,4 @@ A refactored version of my dotfiles, don't overwrite any files/folders.
 - [Vertex Icons](https://github.com/horst3180/Vertex-Icons)
 - [Arc Theme](https://github.com/horst3180/Arc-theme)
 
-## References
 
-
-## Files to link
-- `~/.vimrc`
-- `~/.tmux.conf`
-- `~/.Xresources`
-- `~/.gitconfig`
-- `~/.gitignore`
-- `~/.gitmessage`
-- `~/.toprc`
-- `~/.zshrc`
-- `~/.i3/`
-- `~/.xinitrc`
-- `~/.config/xfce4/terminal/terminalrc`
-- `~/.config/fish/config.fish`
-- `~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings`
