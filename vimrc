@@ -25,6 +25,7 @@ Plug 'scrooloose/nerdtree' ", { 'on': 'NERDTreeToggle' }
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'bling/vim-bufferline'
+Plug 'myusuf3/numbers.vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -134,6 +135,10 @@ endfunction
 
 " Plugin Config
 "--------------
+
+" Numbers
+nnoremap <F3> :NumbersToggle<CR>
+" nnoremap <F4> :NumbersOnOff<CR>
 
 " Open NERDTree for the current file argument e.g. gvim .
 if isdirectory(argv(0))
