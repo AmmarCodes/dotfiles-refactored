@@ -171,13 +171,13 @@ bar {
     position top
     separator_symbol "|"
   colors {
-  separator #AAAAAA
-  background #1f2326
-  statusline #FFFFFF
-  focused_workspace #9FCA56 #9FCA56 #151718
-  active_workspace #DCCD69 #DCCD69 #151718
-  inactive_workspace #1f2326 #1f2326 #AAAAAA
-  urgent_workspace #CE4045 #CE4045 #FFFFFF
+    separator #AAAAAA
+    background #222133
+    statusline #FFFFFF
+    focused_workspace #e7d8b1 #e7d8b1 #181715
+    active_workspace #DCCD69 #DCCD69 #181715
+    inactive_workspace #222133 #222133 #AAAAAA
+    urgent_workspace #CE4045 #CE4045 #FFFFFF
   }
 }
 
@@ -307,7 +307,8 @@ exec --no-startup-id compton -b --config ~/.compton.conf &
 exec_always --no-startup-id feh --bg-scale $HOME/dotfiles/wallpapers/current
 
 # Colorscheme - set using i3-style seti
-client.focused #4F99D3 #4F99D3 #151718 #9FCA56
-client.focused_inactive #9FCA56 #9FCA56 #151718 #A074C4
-client.unfocused #1f2326 #1f2326 #AAAAAA #A074C4
-client.urgent #CE4045 #CE4045 #FFFFFF #DCCD69
+
+client.focused #664477 #664477 #cccccc #e7d8b1
+client.focused_inactive #e7d8b1 #e7d8b1 #181715 #A074C4
+client.unfocused #222133 #222133 #AAAAAA #A074C4
+client.urgent #CE4045 #CE4045 #e7d8b1 #DCCD69
