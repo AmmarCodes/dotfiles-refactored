@@ -187,7 +187,7 @@ bindsym Mod1+Tab focus right
 bindsym Mod1+Shift+Tab focus left
 
 # screenshot
-bindsym --release Print exec scrot $HOME/Pictures/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png
+bindsym --release Print exec scrot $HOME/Pictures/Screenshot/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png
 
 # file explorer
 bindsym Mod1+e  exec --no-startup-id thunar
