@@ -32,7 +32,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " Development
-Plug 'skammer/vim-css-color'
+Plug 'skammer/vim-css-color', {'for': 'css'}
 Plug 'scrooloose/syntastic'
 Plug 'shawncplus/phpcomplete.vim', {'for': 'php'}
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
