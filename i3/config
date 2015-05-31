@@ -167,6 +167,7 @@ bar {
     # mode hide
     # hidden_state hide
     # modifier $mod
+    mode dock
     status_command i3blocks
     position top
     separator_symbol "|"
@@ -290,7 +291,8 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 
-
+# Authentication Agent
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Network Applet
 exec --no-startup-id nm-applet &
 # Language
