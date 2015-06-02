@@ -6,6 +6,7 @@ git submodule update
 
 ln -s ~/dotfiles/xinitrc ~/.xinitrc
 ln -s ~/dotfiles/vimrc ~/.vimrc
+ln -s ~/dotfiles/nvimrc ~/.nvimrc
 ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/dotfiles/gitignore ~/.gitignore
