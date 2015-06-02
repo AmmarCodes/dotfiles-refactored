@@ -26,7 +26,7 @@ Other than default i3 key bindings, There's:
 - zsh, with [prezto](https://github.com/sorin-ionescu/prezto).
 - openssh
 - tmux
-- i3-gaps-git i3blocks dmenu dunst compton feh acpi sysstat
+- i3-gaps-git i3blocks dmenu2 dunst compton feh acpi sysstat
 
 #### Misc
 - google-chrome
