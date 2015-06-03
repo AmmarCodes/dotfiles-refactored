@@ -20,6 +20,11 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'myusuf3/numbers.vim'
 
 Plug 'majutsushi/tagbar',       { 'on': 'TagbarToggle' }
+
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 
 
