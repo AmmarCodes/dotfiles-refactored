@@ -140,6 +140,10 @@ nnoremap <leader>w    :tabclose<cr>
 " Escape
 inoremap jf           <esc>
 
+" Move lines up and down, Alt+Up or Alt+Down
+nmap <A-Up> :m -2<cr>
+nmap <A-Down> :m +1<cr>
+
 " File Explorer
 nnoremap <leader>b    :VimFilerExplorer<cr>
 nnoremap <cr>         :noh<cr><cr>
@@ -180,5 +184,4 @@ nnoremap <F3> :NumbersToggle<CR>
 """""""""""""""""""""""""
 " Better Whitespace, automatically strip the whitespaces for the given file types
 autocmd FileType <php,javascript,html,css,sass,scss> autocmd BufWritePre <buffer> StripWhitespace
-
 
