@@ -3,6 +3,18 @@
 git submodule init
 git submodule update
 
+mkdir ~/.vim
+mkdir ~/.nvim
+
+mkdir ~/.vim/swaps
+mkdir ~/.nvim/swaps
+
+mkdir ~/.vim/backups
+mkdir ~/.nvim/backups
+
+mkdir ~/.vim/undo
+mkdir ~/.nvim/undo
+
 
 ln -s ~/dotfiles/xinitrc ~/.xinitrc
 ln -s ~/dotfiles/vimrc ~/.vimrc
