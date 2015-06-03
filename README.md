@@ -50,7 +50,6 @@ Other than default i3 key bindings, There's:
 - Enter default date timezone in `/etc/php/php.ini`; `Asia/Damascus`.
 
 #### VIM
-- Create the following dirs: `~/.vim/backups`, `~/.vim/undo`, `~/.vim/swaps`.
 - [Vimplug](https://github.com/junegunn/vim-plug#usage)
 
 #### SublimeText
