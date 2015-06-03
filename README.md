@@ -37,9 +37,10 @@ Other than default i3 key bindings, There's:
 #### Development
 
 - Sublime
-- Vim
+- Vim / NeoVim
 - NodeJS (with npm)
 - PHP, Composer and MariaDB `sudo pacman -S php php-composer php-mcrypt php-pear php-sqlite mariadb`, install mariadb by `sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql`, then `mysql_secure_installation`.
+- `sudo pacman -S the_silver_searcher ctags`
 
 ### Additional Config
 
