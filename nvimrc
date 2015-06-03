@@ -144,6 +144,10 @@ inoremap jf           <esc>
 nnoremap <leader>b    :VimFilerExplorer<cr>
 nnoremap <cr>         :noh<cr><cr>
 
+" Fix php file using php-cs-fixer
+autocmd BufRead *.php nmap <buffer> <leader>f :!php-cs-fixer fix %<cr><cr>
+
+
 " n/vimrc editing/reloading
 if has('nvim')
     nnoremap <leader>ve   :tabnew ~/.nvimrc<cr>
