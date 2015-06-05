@@ -14,16 +14,19 @@ Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler.vim'
 
 " Editing
-Plug 'junegunn/vim-easy-align', { 'on': '<plug>(LiveEasyAlign)' }
+Plug 'junegunn/vim-easy-align',  { 'on': '<plug>(LiveEasyAlign)' }
 Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'myusuf3/numbers.vim'
 
-Plug 'majutsushi/tagbar',       { 'on': 'TagbarToggle' }
+Plug 'majutsushi/tagbar',        { 'on': 'TagbarToggle' }
 
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+
+" Development
+Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
 
 call plug#end()
 
@@ -117,6 +120,10 @@ if executable('ag')
     let g:ctrlp_use_caching = 0
 endif
 
+" PHP-CS-Fixer
+let g:php_cs_fixer_level = "~/.php_cs"
+let g:php_cs_fixer_enable_default_mapping = 0
+
 
 
 """""""""""""""""""""""""
@@ -149,7 +156,7 @@ nnoremap <leader>b    :VimFilerExplorer<cr>
 nnoremap <cr>         :noh<cr><cr>
 
 " Fix php file using php-cs-fixer
-autocmd BufRead *.php nmap <buffer> <leader>f :!php-cs-fixer fix %<cr><cr>
+autocmd BufRead *.php nmap <buffer> <leader>f :call PhpCsFixerFixFile()<cr><cr>
 
 
 " n/vimrc editing/reloading
