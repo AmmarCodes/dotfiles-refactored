@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'itchyny/lightline.vim'
 
 " colorschemes
 Plug 'freeo/vim-kalisi'
@@ -19,14 +20,20 @@ Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'myusuf3/numbers.vim'
 
-Plug 'majutsushi/tagbar',        { 'on': 'TagbarToggle' }
-
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " Development
-Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
+Plug 'tomtom/tcomment_vim'
+Plug 'ervandew/supertab'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'majutsushi/tagbar',        { 'on': 'TagbarToggle' }
+" Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
+Plug 'StanAngeloff/php.vim',     { 'for': 'php' }
+Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
+Plug 'HTML-AutoCloseTag', { 'for': ['php', 'html'] }
 
 call plug#end()
 
@@ -51,6 +58,7 @@ set t_Co=256
 "let &t_AB="\e[48;5;%dm"
 "let &t_AF="\e[38;5;%dm"
 
+set nowrap
 set autoindent
 set autoread
 set incsearch       " Incremental search
@@ -121,10 +129,14 @@ if executable('ag')
 endif
 
 " PHP-CS-Fixer
-let g:php_cs_fixer_level = "~/.php_cs"
+let g:php_cs_fixer_verbose = 1
+let g:php_cs_fixer_config_file = "~/.php_cs"
 let g:php_cs_fixer_enable_default_mapping = 0
 
-
+" Lightline
+let g:lightline = {
+      \ 'colorscheme': 'Tomorrow_Night_Eighties',
+      \ }
 
 """""""""""""""""""""""""
 " Key-bindings
@@ -156,7 +168,9 @@ nnoremap <leader>b    :VimFilerExplorer<cr>
 nnoremap <cr>         :noh<cr><cr>
 
 " Fix php file using php-cs-fixer
-autocmd BufRead *.php nmap <buffer> <leader>f :call PhpCsFixerFixFile()<cr><cr>
+" autocmd BufRead *.php nmap <buffer> <leader>f :call PhpCsFixerFixFile()<cr><cr>
+" Fix php file using php-cs-fixer
+autocmd BufRead *.php nmap <buffer> <leader>f :!php-cs-fixer fix --config-file=./.php_cs %:p<cr><cr>
 
 
 " n/vimrc editing/reloading
