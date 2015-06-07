@@ -27,12 +27,17 @@ Other than default i3 key bindings, There's:
 - openssh
 - tmux
 - i3-gaps-git i3blocks dmenu2 dunst compton feh acpi sysstat
+- python-pip
 
 #### Misc
 - google-chrome
 - skype
 - uget
 - scudcloud (Slack linux client)
+
+#### Appearance
+- otf-fira-code-git
+- arc-gtk-theme-git
 
 #### Development
 
