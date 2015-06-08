@@ -39,6 +39,7 @@ Other than default i3 key bindings, There's:
 #### Appearance
 - otf-fira-code-git
 - siji-git
+- gohufont
 - arc-gtk-theme-git
 
 #### Development
