@@ -20,7 +20,10 @@ source "$HOME/dotfiles/zsh-plugins/zshmarks/zshmarks.plugin.zsh"
 source "$HOME/dotfiles/aliases.zsh"
 
 # PATH
-export PATH=$PATH:/$HOME/.composer/vendor/bin:.vendor/bin/:.
+export PATH=$PATH:/$HOME/.composer/vendor/bin:.vendor/bin/:.:~/.gem/ruby/2.2.0/bin
+
+# Editor
+export EDITOR=nvim
 
 # Base16 Shell
 # BASE16_SHELL="$HOME/dotfiles/base16-shell/base16-eighties.dark.sh"
