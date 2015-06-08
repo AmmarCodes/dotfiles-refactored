@@ -16,7 +16,7 @@ Plug 'Shougo/vimfiler.vim'
 
 " Editing
 Plug 'junegunn/vim-easy-align',  { 'on': '<plug>(LiveEasyAlign)' }
-Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
+Plug 'kien/ctrlp.vim', { 'on': ['CtrlP', 'CtrlPTag'] }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'myusuf3/numbers.vim'
 
