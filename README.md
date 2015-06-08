@@ -34,6 +34,7 @@ Other than default i3 key bindings, There's:
 - skype
 - uget
 - scudcloud (Slack linux client)
+- wmctrl
 
 #### Appearance
 - otf-fira-code-git
