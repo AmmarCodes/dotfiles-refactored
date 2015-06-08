@@ -1,3 +1,7 @@
+# NeoVim
+alias vim="nvim"
+alias vi="nvim"
+
 # Vagrant
 alias vu='vagrant up'
 alias vs='vagrant ssh'
