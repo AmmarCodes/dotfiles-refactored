@@ -33,4 +33,4 @@ case $PERC in
 	;;
 esac
 
-echo "%{F$COLOR_ICON}$icon $SSID%{F-} "
+echo "%{F#55ffffff}$icon%{F-} $SSID "

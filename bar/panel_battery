@@ -63,4 +63,4 @@ case $BAT in
 esac
 
 # Create Bar
-echo "%{F$COLOR_ICON}$icon%{F-} $BAT% $TIME"
+echo "%{F#55ffffff}$icon%{F-} $BAT% $TIME"

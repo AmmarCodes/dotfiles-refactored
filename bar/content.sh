@@ -5,9 +5,12 @@ white="FFFFFF"
 black="#181818"
 darkgrey="#282828"
 green="#8F9D6A"
+transgray="#55ffffff"
+
+separator="%{F#22ffffff} | %{F-}"
 
 clock() {
-    DATE=$(date "+%a %d %h %{F#FF775759}%{F-} %I:%M")
+    DATE=$(date "+%a %d %h %{F$transgray}%{F-} %I:%M")
     echo -n "$DATE"
 }
 
@@ -17,7 +20,8 @@ battery() {
 
 memory() {
     # Show free memory
-    free -m | awk '/Mem:/ {print " " $3" MB Used "}'
+    echo -n "%{F$transgray}%{F-}"
+    free -m | awk '/Mem:/ {print " " $3" MB Used "}'
 }
 
 cpu() {
@@ -62,8 +66,8 @@ workspace() {
              wmctrl -d \
              | awk '/ / {print $2 $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20}' ORS=''\
              | sed -e 's/\s*  //g' \
-             -e 's/\*[ 0-9A-Za-z]*[^ -~]*/%{B#8F9D6A} & %{B}/g' \
-             -e 's/\-[ 0-9A-Za-z]*[^ -~]*/%{B#181818}%{A:i3-msg workspace &:} & %{A}%{B}/g' \
+             -e 's/\*[ 0-9A-Za-z]*[^ -~]*/%{B#bb222222} & %{B}/g' \
+             -e 's/\-[ 0-9A-Za-z]*[^ -~]*/%{B#22181818}%{A:i3-msg workspace &:} & %{A}%{B}/g' \
              -e 's/\*//g' \
              -e 's/ -/ /g' \
              )
@@ -91,7 +95,7 @@ while true; do
     #     %{B$green} $(cpu) \
     #     %{B$darkgrey} $(volume) \
     # %{r}"
-    echo "%{l} $(workspace) %{l} %{c}$(clock)%{c} %{r}$(cpu) | $(memory) |  $(battery) | $(wifi)%{r}"
+    echo "%{l} $(workspace) %{l} %{c}$(clock)%{c} %{r}$(cpu) $separator $(memory) $separator  $(battery) $separator $(wifi)%{r}"
     # xset dpms 0 0 0
     sleep .05s
 done
