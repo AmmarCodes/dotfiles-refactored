@@ -30,8 +30,8 @@
 		"draw_active"
 	],
 	"indent_to_bracket": true,
-	"line_padding_bottom": 6,
-	"line_padding_top": 6,
+	"line_padding_bottom": 4,
+	"line_padding_top": 4,
 	"match_brackets": true,
 	"match_brackets_angle": true,
 	"match_brackets_braces": true,
