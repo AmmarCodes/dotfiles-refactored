@@ -10,7 +10,7 @@ transgray="#55ffffff"
 separator="%{F#22ffffff} | %{F-}"
 
 clock() {
-    DATE=$(date "+%a %d %h %{F$transgray}%{F-} %I:%M")
+    DATE=$(date "+%a %d %h %{F$transgray}%{F-} %I:%M %{F$transgray}%p%{F-}")
     echo -n "$DATE"
 }
 
