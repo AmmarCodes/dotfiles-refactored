@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# WIFI ICONS
+# 
+
+WIRELESS=`iw dev | ag -o 'Interface .+' | sed 's/^Interface //'`
+
+
+QUAL=`iwconfig $WIRELESS | grep 'Link Quality=' | awk '{gsub(/[=/]/," "); print $3}'`
+MAX=`iwconfig $WIRELESS | grep 'Link Quality=' | awk '{gsub(/[=/]/," "); print $4}'`
+SSID=`iw dev wlp1s0f0 link | ag -o 'SSID: .+' | sed 's/^SSID: //'`
+PERC=`echo $QUAL*100/$MAX | bc`
+
+icon=""
+case $PERC in
+	[0-4])
+		icon=""
+	;;
+	[4-9])
+		icon=""
+	;;
+	[2-3]*)
+		icon=""
+	;;
+	[4-5]*)
+		icon=""
+	;;
+	[6-7]*)
+		icon=""
+	;;
+	*)
+		icon=""
+	;;
+esac
+
+echo "%{F$COLOR_ICON}$icon $SSID%{F-} "
