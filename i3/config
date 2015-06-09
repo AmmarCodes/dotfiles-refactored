@@ -171,15 +171,7 @@ bindsym $mod+r mode "resize"
 #     status_command i3blocks -c ~/dotfiles/i3blocks.conf
 #     position top
 #     separator_symbol "|"
-#   colors {
-#     separator #AAAAAA
-#     background #222133
-#     statusline #FFFFFF
-#     focused_workspace #e7d8b1 #e7d8b1 #181715
-#     active_workspace #DCCD69 #DCCD69 #181715
-#     inactive_workspace #222133 #222133 #AAAAAA
-#     urgent_workspace #CE4045 #CE4045 #FFFFFF
-#   }
+#
 # }
 
 workspace_auto_back_and_forth yes
@@ -305,8 +297,7 @@ exec_always --no-startup-id feh --bg-scale $HOME/dotfiles/wallpapers/current
 exec_always --no-startup-id ~/dotfiles/bar/lemonbar.sh
 
 # Colorscheme - set using i3-style seti
-
-client.focused #664477 #664477 #cccccc #e7d8b1
-client.focused_inactive #e7d8b1 #e7d8b1 #181715 #A074C4
-client.unfocused #222133 #222133 #AAAAAA #A074C4
-client.urgent #CE4045 #CE4045 #e7d8b1 #DCCD69
+client.focused #0088CC #0088CC #ffffff #dddddd
+client.focused_inactive #333333 #333333 #888888 #292d2e
+client.unfocused #333333 #333333 #888888 #292d2e
+client.urgent #2f343a #900000 #ffffff #900000
