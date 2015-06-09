@@ -95,7 +95,7 @@ while true; do
     #     %{B$green} $(cpu) \
     #     %{B$darkgrey} $(volume) \
     # %{r}"
-    echo "%{l} $(workspace) %{l} %{c}$(clock)%{c} %{r}$(cpu) $separator $(memory) $separator  $(battery) $separator $(wifi)%{r}"
+    echo "%{l} $(workspace) %{l} %{c}$(clock)%{c} %{r}$(cpu) $separator $(memory) $separator  $(battery) $separator   %{r}"
     # xset dpms 0 0 0
     sleep .05s
 done

@@ -37,5 +37,6 @@ mkdir ~/.config/glances
 ln -s ~/dotfiles/glances.conf ~/.config/glances/glances.conf
 ln -s ~/dotfiles/.compton.conf ~/.compton.conf
 ln -s ~/dotfiles/i3blocks.conf ~/.i3blocks.conf
+ln -s ~/dotfiles/stalonetrayrc ~/.stalonetrayrc
 ln -s ~/dotfiles/xresources/Xresources ~/.Xresources
 ln -s ~/dotfiles/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
