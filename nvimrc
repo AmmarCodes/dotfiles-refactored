@@ -3,7 +3,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'pbrisbin/vim-mkdir'
-Plug 'ntpeters/vim-better-whitespace'
+" Plug 'ntpeters/vim-better-whitespace'
 Plug 'itchyny/lightline.vim'
 
 " colorschemes
