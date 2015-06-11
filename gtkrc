@@ -2,8 +2,8 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/ammar/.gtkrc-2.0.mine"
-gtk-theme-name="Arc-theme"
-gtk-icon-theme-name="Vertex-Icons"
+gtk-theme-name="Arc"
+gtk-icon-theme-name="UltraFlatIconsDark"
 gtk-font-name="Cantarell 10"
 gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=0
@@ -15,5 +15,5 @@ gtk-enable-event-sounds=1
 gtk-enable-input-feedback-sounds=1
 gtk-xft-antialias=1
 gtk-xft-hinting=1
-gtk-xft-hintstyle="hintslight"
+gtk-xft-hintstyle="hintfull"
 gtk-xft-rgba="rgb"
