@@ -10,6 +10,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'freeo/vim-kalisi'
 Plug 'morhetz/gruvbox'
 Plug 'w0ng/vim-hybrid'
+Plug 'yosiat/oceanic-next-vim'
 
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler.vim'
@@ -53,7 +54,7 @@ set undodir=~/.nvim/undo
 " colorscheme
 syntax on
 set background=dark
-colorscheme gruvbox
+colorscheme OceanicNext
 set t_Co=256
 "let &t_AB="\e[48;5;%dm"
 "let &t_AF="\e[38;5;%dm"
@@ -76,6 +77,7 @@ set showmatch
 set incsearch
 set hls
 set cursorline
+hi CursorLine   cterm=NONE ctermbg=234 ctermfg=NONE
 set number
 set pastetoggle =<f3>
 
