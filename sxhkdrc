@@ -105,7 +105,14 @@ super + control + g
     google-chrome-unstable
 
 super + d
-    dmenuwrapper
+    dmenu_run -dim 0.7 -h 25 -l 4 -y 200 -p "What do you need?"
+
+super + e
+    thunar
+
+# Lock screen
+alt + ctrl + l
+    slimlock
 
 ## System
 ########################
@@ -124,9 +131,12 @@ XF86AudioMute
 
 # Brightness goes up
 XF86MonBrightnessUp
-    brightnessScript
+    xbacklight -inc 10
 
 # Brightness goes down
 XF86MonBrightnessDown
-    brightnessScript
- 
+    xbacklight -dec 5
+
+# Printscreen
+Print
+    scrot $HOME/Pictures/Screenshots/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png
