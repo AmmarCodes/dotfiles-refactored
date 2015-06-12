@@ -292,7 +292,7 @@ exec_always --no-startup-id setxkbmap -layout us,ar -option grp:alt_shift_toggle
 # Compton
 exec --no-startup-id compton -b --config ~/.compton.conf &
 # Set the wallpaper
-exec_always --no-startup-id feh --bg-scale $HOME/dotfiles/wallpapers/current
+exec_always --no-startup-id ~/dotfiles/bin/set_bg
 # Lemonbar
 exec_always --no-startup-id ~/dotfiles/bar/lemonbar.sh
 

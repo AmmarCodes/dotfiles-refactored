@@ -1,0 +1,3 @@
+#!/bin/sh
+
+feh --bg-scale $HOME/dotfiles/wallpapers/current
