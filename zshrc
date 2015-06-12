@@ -20,7 +20,7 @@ source "$HOME/dotfiles/zsh-plugins/zshmarks/zshmarks.plugin.zsh"
 source "$HOME/dotfiles/aliases.zsh"
 
 # PATH
-export PATH=$PATH:/$HOME/.composer/vendor/bin:.vendor/bin/:.:~/.gem/ruby/2.2.0/bin
+export PATH=$PATH:/$HOME/.composer/vendor/bin:.vendor/bin/:.:~/.gem/ruby/2.2.0/bin:~/dotfiles/bin/:
 
 # Editor
 export EDITOR=nvim

@@ -1,0 +1,36 @@
+# bspwm panel config
+
+geometry="1346x15+10"
+FONT1="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
+FONT2="-gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso8859-1"
+# FONT1="-lucy-tewi-medium-r-normal--11-90-75-75-p-58-iso10646-1"
+
+PAD="  "
+RPAD="    "
+
+# color definitions
+
+BAR_BG="#FF232425"
+BAR_FG="#FFb0b0b0"
+
+F_O_FG="#FFf7a248"
+F_O_BG=${BAR_BG}
+F_F_FG="#FFa64477"
+F_F_BG=${BAR_BG}
+F_U_FG="#FFFF8700"
+F_U_BG=${BAR_BG}
+O_FG="#FFbb4455"
+O_BG=${BAR_BG}
+F_FG="#FF444444"
+F_BG=${BAR_BG}
+U_FG="#FFFF8700"
+U_BG="#FF101010"
+#CLOCK_FG="#FFc7bda4"
+#CLOCK_BG="#FF25204c"
+#LAYOUT_FG="#FFAAAAAA"
+#LAYOUT_BG="#FF505050"
+#STATUS_FG="#FFA3A6AB"
+#STATUS_BG=${BAR_BG}
+TITLE_FG="#FFb0b0c0"
+TITLE_BG=${BAR_BG}
+

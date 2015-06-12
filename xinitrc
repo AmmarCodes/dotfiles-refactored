@@ -11,13 +11,15 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 xrdb -load /home/ammar/dotfiles/xresources/Xresources
 
-DEFAULT_SESSION=i3 #xfce4-session #budgie-session
-case $1 in
-  xfce|xfce4 ) exec dbus-launch xfce4-session ;;
-  budgie     ) exec dbus-launch budgie-session ;;
-  i3|i3wm    ) exec dbus-launch i3;;
-  *          ) exec dbus-launch $DEFAULT_SESSION ;;
-esac
+# DEFAULT_SESSION=bspwm-session #i3 #xfce4-session #budgie-session
+# case $1 in
+#   xfce|xfce4 ) exec dbus-launch xfce4-session ;;
+#   budgie     ) exec dbus-launch budgie-session ;;
+#   i3|i3wm    ) exec dbus-launch i3;;
+#   *          ) exec dbus-launch $DEFAULT_SESSION ;;
+# esac
+#
+# exec $1
 
-exec $1
-
+sxhkd &
+exec bspwm

@@ -1,0 +1,55 @@
+#! /bin/sh
+
+## Bspwm config
+
+# General config
+bspc config border_width        2
+bspc config window_gap          10
+
+bspc config top_padding         20
+bspc config split_ratio         0.52
+bspc config borderless_monocle  true
+bspc config gapless_monocle     true
+bspc config focus_by_distance   true
+
+# Colors
+bspc config normal_border_color "#332d29"
+bspc config active_border_color "#817267"
+bspc config focused_border_color "#504339"
+bspc config presel_border_color "#9a875f"
+bspc config urgent_border_color "#9f7155"
+bspc config focused_locked_border_color "#9a875f"
+bspc config normal_frame_opacity 0.0
+bspc config focused_frame_opacity 0.1
+
+
+# Workspaces
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+# Rules
+bspc rule -a Gimp desktop=^8 follow=on floating=on
+bspc rule -a Chromium desktop=^2
+bspc rule -a mplayer2 floating=on
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+
+## Auto start
+#############
+
+# set background
+~/dotfiles/bin/set_bg &
+# Authentication Agent
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+# Network Applet
+nm-applet &
+# Language
+setxkbmap -layout us,ar -option grp:alt_shift_toggle
+# Compton
+compton -b --config ~/.compton.conf &
+# Lemonbar
+# ~/dotfiles/bar/lemonbar.sh &
+~/dotfiles/bspwm_bar/run.sh &
+# Hide mouse cursor when idle
+unclutter -root -idle 1 &
+# Notification wrapper
+dunst -conf dunst/dunstrc &

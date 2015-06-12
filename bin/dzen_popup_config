@@ -1,0 +1,44 @@
+# config options for dzen popups
+# Edited Wednesday, 18 March 2015 18:23 IST - reorganize and add new code.
+
+
+# FONT="tamsynmod:pixelsize=11"
+FONT="-lucy-tewi-medium-r-normal--11-90-75-75-p-58-iso10646-1"
+
+# Colors
+FG="#B0B0B0"
+BG="#232425"
+
+bar_bg="#404040"        # for gdbar
+bar_fg="#ee8541"
+bar_warn="#bb4455"
+label="#bb4455"         # popup headings
+highlight="#a64477"     
+
+# gdbar width and height
+bar_h=2
+bar_w=130
+
+
+# function to get mouse x-coordinate
+function mouselocation(){
+    eval $(xdotool getmouselocation --shell 2> /dev/null)
+    screen_width=$(sres -W)
+    x_offset=$((WIDTH/2))
+    R_edge=$((X+x_offset))
+    XPOS=$((X-x_offset))
+    if [[ $R_edge -gt $screen_width ]]; then
+        XPOS=$((X-WIDTH))
+    fi
+}
+
+PAD="  "
+ACT="onstart=uncollapse;button1=exit;button3=exit"
+YPOS=20
+TIME=4
+# Options specific to individual popups. Do not override.
+[[ $XPOS ]] || mouselocation
+
+# Some options below may not have been defined in this file.
+OPTIONS="-bg ${BG} -fg ${FG} -x ${XPOS} -y ${YPOS} -w ${WIDTH} -e ${ACT} -ta 'c'"
+

@@ -72,3 +72,4 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+export PANEL_FIFO="/tmp/panel-fifo"
