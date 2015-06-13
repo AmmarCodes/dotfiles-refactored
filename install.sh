@@ -45,3 +45,4 @@ ln -s ~/dotfiles/xresources/Xresources ~/.Xresources
 ln -s ~/dotfiles/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
 ln -s ~/dotfiles/bspwmrc ~/.config/bspwm/bspwmrc
 ln -s ~/dotfiles/sxhkdrc ~/.config/sxhkd/sxhkdrc
+ln -s ~/dotfiles/redshift.conf ~/.config/redshift.conf

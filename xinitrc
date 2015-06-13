@@ -22,4 +22,5 @@ xrdb -load /home/ammar/dotfiles/xresources/Xresources
 # exec $1
 
 sxhkd &
+redshift &
 exec bspwm
