@@ -1,5 +1,8 @@
 #! /bin/sh
 
+# set the cursor on inactive areas
+xsetroot -cursor_name left_ptr
+
 ## Bspwm config
 
 # General config
@@ -27,11 +30,8 @@ bspc config focused_frame_opacity 0.1
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 # Rules
-bspc rule -a Gimp desktop=^8 follow=on floating=on
-bspc rule -a Chromium desktop=^2
-bspc rule -a mplayer2 floating=on
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
+bspc rule -a google-chrome-unstable desktop=^2
+bspc rule -a Thunar floating=on
 
 ## Auto start
 #############
