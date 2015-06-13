@@ -41,7 +41,7 @@ ${endif}\
 %{F\#FF6C6C6C}| ${execp volume_level.sh} \
 %{F\#FF6C6C6C}|${if_match "${acpiacadapter}" == "on-line"}\
 %{F\#FFCD533C} %{F-} ${if_match ${battery_percent} >= 95}${else}\
-${battery_percent}%% ${endif}${else}\
+${battery_percent}% ${endif}${else}\
 ${if_match ${battery_percent BAT0} <= 30}\
 %{F\#FFFF8700} %{F-} ${else}\
 %{F\#FFbb4455} %{F-} ${endif}${battery_percent}% ${endif}\
