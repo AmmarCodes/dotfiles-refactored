@@ -54,7 +54,7 @@ set undodir=~/.nvim/undo
 " colorscheme
 syntax on
 set background=dark
-colorscheme OceanicNext
+colorscheme gruvbox
 set t_Co=256
 "let &t_AB="\e[48;5;%dm"
 "let &t_AF="\e[38;5;%dm"
@@ -206,5 +206,5 @@ nnoremap <F3> :NumbersToggle<CR>
 " Auto stuff
 """""""""""""""""""""""""
 " Better Whitespace, automatically strip the whitespaces for the given file types
-autocmd FileType <php,javascript,html,css,sass,scss> autocmd BufWritePre <buffer> StripWhitespace
+" autocmd FileType <php,javascript,html,css,sass,scss> autocmd BufWritePre <buffer> StripWhitespace
 
