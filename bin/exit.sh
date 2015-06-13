@@ -44,12 +44,14 @@ then
     sudo shutdown -r now | zenity --progress --percentage=95 --title=Reboot --auto-close --auto-kill --no-cancel --width=300
 
 
-elif [ "$exit_type" = "Shutdown" ]then
+elif [ "$exit_type" = "Shutdown" ]
+then
     # Do Reboot here.
     sudo shutdown -r now | zenity --progress --percentage=95 --title=Reboot --auto-close --auto-kill --no-cancel --width=300
 
 
-elif [ "$exit_type" = "Suspend" ]then
+elif [ "$exit_type" = "Suspend" ]
+then
     # Do suspend here.
     sudo pm-suspend | zenity --progress --percentage=95 --title=Reboot --auto-close --auto-kill --no-cancel --width=300
 
