@@ -6,6 +6,7 @@
 
 NORMIFS=$IFS
 FIELDIFS=':'
+monitors=$(bspc query -M | wc -l)
 
 source $(dirname $0)/panel_config
 
@@ -80,5 +81,9 @@ while read -r line ; do
             IFS=$NORMIFS
             ;;
     esac
-    printf "%s\n" "%{l}$wm_infos %{c}$title %{r}$sys_infos"
+    if [ $monitors == 2 ]; then 
+        printf "%s\n" "%{l}$wm_infos %{c}$title %{r}$sys_infos%{S+}%{l}$wm_infos %{r} $sys_infos"
+    else
+        printf "%s\n" "%{l}$wm_infos %{c}$title %{r}$sys_infos"
+    fi
 done
