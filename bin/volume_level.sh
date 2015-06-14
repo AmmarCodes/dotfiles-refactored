@@ -1,6 +1,7 @@
 #!/bin/bash
 
-VOL=$(amixer -M get Master | grep -oE '[0-9]+%' | sed 's/%//')
+# VOL=$(amixer -M get Master | grep -oE '[0-9]+%' | sed 's/%//')
+VOL=$(pamixer --get-volume)
 ICON=
 FUNC=${1:-"bar_font"}
 
