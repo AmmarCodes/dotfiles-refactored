@@ -27,7 +27,20 @@ bspc config focused_frame_opacity 0.1
 
 
 # Workspaces
-bspc monitor -d web II III IV V VI VII VIII IX X
+monitors=$(bspc query -M | wc -l)
+if [$monitors == 1]; then
+    bspc monitor -d web II III IV V VI VII VIII IX X
+else
+    # Set the monitors properly
+    xrandr --output CRT1 --off && xrandr --output CRT1 --mode 1024x768 --right-of LVDS
+    i=1
+    for monitor in $(bspc query -M); do
+        bspc monitor $monitor \
+            -n "$i" \
+            -d [$i/{I,II,III}]
+        let i++
+    done
+fi
 
 # Rules
 bspc rule -a google-chrome-unstable desktop=^2
