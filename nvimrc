@@ -1,19 +1,21 @@
 set nocompatible
 
 call plug#begin('~/.vim/plugged')
+
 Plug 'tpope/vim-sensible'
 Plug 'pbrisbin/vim-mkdir'
-" Plug 'ntpeters/vim-better-whitespace'
 Plug 'itchyny/lightline.vim'
 
 " colorschemes
-Plug 'freeo/vim-kalisi'
 Plug 'morhetz/gruvbox'
-Plug 'w0ng/vim-hybrid'
-Plug 'yosiat/oceanic-next-vim'
+" Plug 'w0ng/vim-hybrid'
+" Plug 'yosiat/oceanic-next-vim'
 
-Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimfiler.vim'
+" Vim customization
+Plug 'ap/vim-buftabline'
+" Plug 'Shougo/unite.vim'
+" Plug 'Shougo/vimfiler.vim'
+Plug 'scrooloose/nerdtree'
 
 " Editing
 Plug 'junegunn/vim-easy-align',  { 'on': '<plug>(LiveEasyAlign)' }
@@ -26,6 +28,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " Development
+Plug 'scrooloose/syntastic'
 Plug 'tomtom/tcomment_vim'
 Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
@@ -35,6 +38,9 @@ Plug 'majutsushi/tagbar',        { 'on': 'TagbarToggle' }
 Plug 'StanAngeloff/php.vim',     { 'for': 'php' }
 Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
 Plug 'HTML-AutoCloseTag', { 'for': ['php', 'html'] }
+Plug 'othree/html5.vim', { 'for': 'html' }
+Plug 'cakebaker/scss-syntax.vim', { 'for': ['css', 'scss'] }
+Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
 
 call plug#end()
 
@@ -65,7 +71,7 @@ set autoread
 set incsearch       " Incremental search
 " mouse active only in normal and visual mode
 set mouse       =nv
-set pastetoggle =<F2>
+" set pastetoggle =<F2>
 set smartcase       " Case insensitive searches become sensitive with capitals
 set smarttab        " sw at the start of the line, sts everywhere else
 set shiftwidth  =4
@@ -79,7 +85,9 @@ set hls
 set cursorline
 hi CursorLine   cterm=NONE ctermbg=234 ctermfg=NONE
 set number
-set pastetoggle =<f3>
+set pastetoggle =<f2>
+set noshowmode
+
 
 
 " always ignore these files
@@ -137,8 +145,54 @@ let g:php_cs_fixer_enable_default_mapping = 0
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'Tomorrow_Night_Eighties',
+      \ 'colorscheme': 'default',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'filename' ] ],
+      \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+      \ },
+      \ 'component_function': {
+      \   'fugitive': 'MyFugitive',
+      \ },
+      \ 'component_expand': {
+      \   'syntastic': 'SyntasticStatuslineFlag',
+      \ },
+      \ 'component': {
+      \   'readonly': '%{&readonly?"":""}',
+      \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
+      \ },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' }
       \ }
+
+" Ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+
+" Syntastic
+let g:syntastic_php_checkers = ['php']
+
+"""""""""""""""""""""""
+" Functions
+"""""""""""""""""""""""
+" Removes trailing spaces
+if !exists("*TrimWhiteSpace")
+    function TrimWhiteSpace()
+        %s/\s*$//
+        ''
+        :endfunction
+endif
+
+" Fugitive for lightline
+function! MyFugitive()
+  if exists("*fugitive#head")
+    let _ = fugitive#head()
+    return strlen(_) ? ' '._ : ''
+  endif
+  return ''
+endfunction
 
 """""""""""""""""""""""""
 " Key-bindings
@@ -156,7 +210,7 @@ nnoremap ]t           :tabnext<cr>
 nnoremap [T           :tabfirst<cr>
 nnoremap ]T           :tablast<cr>
 nnoremap <leader>t    :tabnew<cr>
-nnoremap <leader>w    :tabclose<cr>
+nnoremap <leader>w    :bw<cr>
 
 " Escape
 inoremap jf           <esc>
@@ -166,7 +220,7 @@ nmap <A-Up> :m -2<cr>
 nmap <A-Down> :m +1<cr>
 
 " File Explorer
-nnoremap <leader>b    :VimFilerExplorer<cr>
+nnoremap <leader>b    :NERDTreeToggle<cr>
 nnoremap <cr>         :noh<cr><cr>
 
 " Fix php file using php-cs-fixer
@@ -177,10 +231,10 @@ autocmd BufRead *.php nmap <buffer> <leader>f :!php-cs-fixer fix --config-file=.
 
 " n/vimrc editing/reloading
 if has('nvim')
-    nnoremap <leader>ve   :tabnew ~/.nvimrc<cr>
+    nnoremap <leader>ve   :e ~/.nvimrc<cr>
     nnoremap <leader>vr   :source ~/.nvimrc<cr>
 else
-    nnoremap <leader>ve   :tabnew ~/.vimrc<cr>
+    nnoremap <leader>ve   :e ~/.vimrc<cr>
     nnoremap <leader>vr   :source ~/.vimrc<cr>
 endif
 
@@ -201,10 +255,21 @@ map <C-p> :CtrlP<cr>
 " Numbers
 nnoremap <F3> :NumbersToggle<CR>
 
+" Trim trailing spaces, using local functions inside n/vimrc
+nnoremap <leader>ws :TrimWhiteSpace()<CR>
+
+
 
 """""""""""""""""""""""""
 " Auto stuff
 """""""""""""""""""""""""
 " Better Whitespace, automatically strip the whitespaces for the given file types
 " autocmd FileType <php,javascript,html,css,sass,scss> autocmd BufWritePre <buffer> StripWhitespace
+
+" NERDTree automatically when vim starts up if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
