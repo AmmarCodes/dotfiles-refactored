@@ -60,9 +60,10 @@ setxkbmap -layout us,ar -option grp:alt_shift_toggle
 # Compton
 compton -b --config ~/.compton.conf &
 # Lemonbar
-# ~/dotfiles/bar/lemonbar.sh &
 ~/dotfiles/bspwm_bar/run.sh &
 # Hide mouse cursor when idle
 unclutter -root -idle 1 &
 # Notification wrapper
 dunst -conf dunst/dunstrc &
+# Stalonetray
+stalonetray &

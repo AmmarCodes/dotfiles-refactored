@@ -34,7 +34,7 @@ fuzzy_edges 0
 
 # geometry <geometry>        # tray's geometry in standard X notation; width and
                              # height are specified in slot_size multiples
-geometry 10x1-0+0
+geometry 5x1+820+0
 
 # grow_gravity <gravity>     # one of N, S, E, W, NW, NE, SW, SE; tray will grow
                              # in the direction opposite to one specified by
@@ -69,7 +69,7 @@ log_level err
 kludges force_icons_size
 # max_geometry <geometry>    # maximal tray dimensions; 0 in width/height means
                              # no limit
-max_geometry 100x30
+max_geometry 100x20
 
 # no_shrink [<bool>]         # disables shrink-back mode
 no_shrink false
@@ -131,7 +131,7 @@ window_strut auto
 
 # window_type <type>         # set the EWMH-compatible window type; one of:
                              # desktop, dock, normal, toolbar, utility
-window_type desktop
+ window_type dock
 
 # xsync [<bool>]             # whether to operate on X server synchronously (SLOOOOW)
 xsync false
