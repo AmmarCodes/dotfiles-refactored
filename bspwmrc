@@ -66,4 +66,4 @@ unclutter -root -idle 1 &
 # Notification wrapper
 dunst -conf dunst/dunstrc &
 # Stalonetray
-stalonetray &
+sleep 3; stalonetray &
