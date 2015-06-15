@@ -28,7 +28,7 @@ bspc config focused_frame_opacity 0.1
 
 # Workspaces
 monitors=$(bspc query -M | wc -l)
-if [$monitors == 1]; then
+if [ $monitors == 1 ]; then
     bspc monitor -d web II III IV V VI VII VIII IX X
 else
     # Set the monitors properly
