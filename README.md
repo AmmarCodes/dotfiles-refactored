@@ -42,6 +42,7 @@ Other than default i3 key bindings, There's:
 - siji-git
 - gohufont
 - arc-gtk-theme-git
+- powerline-fonts-git
 
 #### Development
 
