@@ -114,7 +114,7 @@ super + control + g
     google-chrome-unstable
 
 super + d
-    dmenu_run -dim 0.7 -h 25 -l 4 -y 200 -p "What do you need?"
+    ~/dotfiles/bin/dmenuwrapper
 
 super + e
     thunar
