@@ -9,3 +9,5 @@
 [commit]
     template = ~/.gitmessage
 
+[receive]
+	denyCurrentBranch = ignore
