@@ -10,6 +10,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
 " Plug 'w0ng/vim-hybrid'
 " Plug 'yosiat/oceanic-next-vim'
+" Plug 'altercation/vim-colors-solarized'
 
 " Vim customization
 Plug 'ap/vim-buftabline'
@@ -41,6 +42,9 @@ Plug 'HTML-AutoCloseTag', { 'for': ['php', 'html'] }
 Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'cakebaker/scss-syntax.vim', { 'for': ['css', 'scss'] }
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
+Plug 'pangloss/vim-javascript', { 'for': 'js' }
+Plug 'jelera/vim-javascript-syntax', { 'for': 'js' }
+Plug 'juvenn/mustache.vim', { 'for': ['js', 'mustache'] }
 
 call plug#end()
 
@@ -145,7 +149,7 @@ let g:php_cs_fixer_enable_default_mapping = 0
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'default',
+      \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'filename' ] ],
@@ -164,8 +168,6 @@ let g:lightline = {
       \   'readonly': '(&filetype!="help"&& &readonly)',
       \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
       \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '', 'right': '' }
       \ }
 
 " Ultisnips
@@ -173,6 +175,13 @@ let g:UltiSnipsExpandTrigger="<tab>"
 
 " Syntastic
 let g:syntastic_php_checkers = ['php']
+
+" vim-javascript
+let javascript_enable_domhtmlcss=1
+let b:javascript_fold=0
+
+" Mustache vim 
+let g:mustache_abbreviations = 1
 
 """""""""""""""""""""""
 " Functions

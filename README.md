@@ -28,7 +28,7 @@ Other than default i3 key bindings, There's:
 - tmux
 - i3-gaps-git lemonbar-xft-git dmenu2 dunst compton feh acpi sysstat
 - python-pip
-- bspwm vnstat sres-git pamixer sxhkd xtitle conky dzen2 unclutter
+- bspwm vnstat sres-git pamixer sxhkd xtitle conky dzen2 unclutter wmname
 
 #### Misc
 - google-chrome

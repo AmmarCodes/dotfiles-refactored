@@ -46,3 +46,4 @@ ln -s ~/dotfiles/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/
 ln -s ~/dotfiles/bspwmrc ~/.config/bspwm/bspwmrc
 ln -s ~/dotfiles/sxhkdrc ~/.config/sxhkd/sxhkdrc
 ln -s ~/dotfiles/redshift.conf ~/.config/redshift.conf
+ln -s ~/dotfiles/ssh_config ~/.ssh/config

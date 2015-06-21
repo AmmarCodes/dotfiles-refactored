@@ -18,4 +18,4 @@ FG="#6F7277"
 BG="#34322E"
 FONT="-*-terminus-*-*-*-*-*-*-*-*-*-*-*-*"
 
-dmenu_run -w $DMENUWIDTH -x $XPOS -y $YPOS -fn ${FONT} -nb $BG -nf $FG -sb $BGSELECT -p "%" -dim 0.55
+dmenu_run -w $DMENUWIDTH -x $XPOS -y $YPOS -fn ${FONT} -nb $BG -nf $FG -sb $BGSELECT -class dmenu -p "%" -dim 0.55 -h 30
