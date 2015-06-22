@@ -36,7 +36,6 @@ ${wireless_essid wlp1s0f0} %{A}${else}\
 %{F\#FF6C6C6C}✘ %{F-}${endif}\
 ${else} %{F\#FF6C6C6C A:toggleinfo.sh:} + %{A}\
 ${endif}\
-%{F\#FF6C6C6C}| ${execp volume_level.sh} \
 %{F\#FF6C6C6C}|${if_match "${acpiacadapter}" == "on-line"}\
 %{F\#FFCD533C} %{F-} ${if_match ${battery_percent} >= 95}${else}\
 ${battery_percent}% ${endif}${else}\
