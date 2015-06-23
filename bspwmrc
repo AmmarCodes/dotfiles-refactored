@@ -71,5 +71,7 @@ dunst -conf dunst/dunstrc &
 pnmixer &
 # Change keyboard repeating rate
 xset r rate 250 25 &
+# Run rxvt daemon
+urxvtd &
 # Stalonetray
 sleep 3; stalonetray &
