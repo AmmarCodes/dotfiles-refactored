@@ -67,5 +67,9 @@ compton -b --config ~/.compton.conf &
 unclutter -root -idle 1 &
 # Notification wrapper
 dunst -conf dunst/dunstrc &
+# Sound applet
+pnmixer &
+# Change keyboard repeating rate
+xset r rate 250 25 &
 # Stalonetray
 sleep 3; stalonetray &
