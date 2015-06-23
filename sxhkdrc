@@ -99,7 +99,7 @@ super + ctrl + {Down,Up}
 #
 
 super + Return
-	gnome-terminal
+	urxvtc
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
