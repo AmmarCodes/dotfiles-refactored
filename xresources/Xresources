@@ -27,19 +27,21 @@ URxvt.internalBorder:       0
 URxvt.lineSpace:            3
 URxvt.iconFile:             /usr/share/icons/Numix-Circle/scalable/apps/terminal.svg
 URxvt.title:                Terminal
+XTerm*termName: xterm-256color
+URxvt*termName: xterm-256color
 
 ! Fonts
 URxvt.allow_bold:           false
-/* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
-URxvt*font: xft:Droid Sans Mono:pixelsize=14:antialias=false:hinting:true,xft:DejaVu Sans Mono:size=15:antialias=false:hinting=true
-URxvt.font-size.zoomfont: xft:Droid Sans Mono:pixelsize=12
+/*URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1*/
+URxvt*font:               xft:DejaVu Sans Mono:size=10:antialias=false:hinting=true
+URxvt.font-size.zoomfont: xft:DejaVu Sans Mono:pixelsize=8
 URxvt.font-size.step: 2
 URxvt.keysym.C-Up:   perl:font-size:increase
 URxvt.keysym.C-Down: perl:font-size:decrease
 URxvt.keysym.C-Left: perl:font-size:reset
 
 ! Fix font space
-URxvt*letterSpace: 1
+URxvt*letterSpace: 0
 
 ! Scrollbar
 URxvt.scrollStyle:          rxvt
@@ -49,11 +51,18 @@ URxvt.scrollBar:            false
 Urxvt*perl-lib:        /usr/lib/urxvt/perl/
 URxvt.perl-ext-common:      default,matcher,fullscreen,font-size,clipboard
 URxvt.matcher.button:       1
-URxvt.urlLauncher:          firefox
+URxvt.urlLauncher:          xdg-open
+URxvt.urlButton: 1
+URxvt.underlineURLs: True
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 ! Fullscreen switch
 URxvt.keysym.F11:       perl:fullscreen:switch
+
+! Disable Ctrl+Shift iso boring stuff
+ URxvt.iso14755: false
+ URxvt.iso14755_52: false
+
 
 ! Cursor
 URxvt.cursorBlink:          true
@@ -67,4 +76,5 @@ URxvt*dynamicColors: on
 URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
 
-#include "/home/ammar/dotfiles/xresources/colorschemes/XresourceTomorrowNightEighties"
+!#include "/home/ammar/dotfiles/xresources/colorschemes/XresourceTomorrowNightEighties"
+#include "/home/ammar/dotfiles/xresources/colorschemes/base16-tomorrow.dark.256.xresources"
