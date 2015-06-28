@@ -111,7 +111,7 @@ alt + {minus,equal}
 
 # run google chrome
 super + control + g
-    google-chrome-unstable
+    chromium
 
 super + d
     ~/dotfiles/bin/dmenuwrapper
