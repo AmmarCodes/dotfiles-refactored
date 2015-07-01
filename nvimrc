@@ -9,8 +9,7 @@ Plug 'itchyny/lightline.vim'
 
 " colorschemes
 " Plug 'morhetz/gruvbox'
-Plug 'whatyouhide/vim-gotham'
-" Plug 'w0ng/vim-hybrid'
+Plug 'w0ng/vim-hybrid'
 " Plug 'yosiat/oceanic-next-vim'
 " Plug 'altercation/vim-colors-solarized'
 
@@ -66,7 +65,7 @@ set undodir=~/.nvim/undo
 " colorscheme
 syntax on
 set background=dark
-colorscheme gotham
+colorscheme default
 set t_Co=256
 "let &t_AB="\e[48;5;%dm"
 "let &t_AF="\e[38;5;%dm"
@@ -89,7 +88,7 @@ set showmatch
 set incsearch
 set hls
 set cursorline
-hi CursorLine   cterm=NONE ctermbg=234 ctermfg=NONE
+hi CursorLine   cterm=NONE ctermbg=NONE ctermfg=NONE
 set number
 set pastetoggle =<f2>
 set noshowmode
@@ -151,7 +150,7 @@ let g:php_cs_fixer_enable_default_mapping = 0
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'gotham',
+      \ 'colorscheme': 'default',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'filename' ] ],
