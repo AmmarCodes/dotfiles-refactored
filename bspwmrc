@@ -47,6 +47,7 @@ bspc rule -a google-chrome-unstable desktop=^2
 bspc rule -a Thunar floating=on
 bspc rule -a Birdie floating=on
 bspc rule -a corebird floating=on
+bspc rule -a urxvt floating=on
 
 ## Auto start
 #############
