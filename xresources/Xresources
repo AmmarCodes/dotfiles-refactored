@@ -17,8 +17,7 @@ Xft.hintstyle:              hintslight
 
 URxvt.depth:                32
 URxvt.geometry:             65x15
-URxvt.transparent:          true
-URxvt*.shading: 0
+URxvt.transparent:          false
 URxvt.fading:               0
 ! URxvt.urgentOnBell:         true
 ! URxvt.visualBell:           true
@@ -78,4 +77,4 @@ URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
 
 !#include "/home/ammar/dotfiles/xresources/colorschemes/XresourceTomorrowNightEighties"
-#include "/home/ammar/dotfiles/xresources/colorschemes/gotham.txt"
+#include "/home/ammar/dotfiles/xresources/colorschemes/material-theme.txt"
