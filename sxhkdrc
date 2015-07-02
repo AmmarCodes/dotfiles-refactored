@@ -155,3 +155,6 @@ XF86MonBrightnessDown
 # Printscreen
 Print
     scrot $HOME/Pictures/Screenshots/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png
+
+alt + Print
+    maim -s $HOME/Pictures/Screenshots/screenshot-$(date +%Y-%m-%d_%H-%M-%S).png
