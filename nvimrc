@@ -230,7 +230,7 @@ nmap <A-Up> :m -2<cr>
 nmap <A-Down> :m +1<cr>
 
 " File Explorer
-nnoremap <leader>b    :NERDTreeToggle<cr>
+nnoremap <leader>b    :Explore<cr>
 nnoremap <cr>         :noh<cr><cr>
 
 " Fix php file using php-cs-fixer
