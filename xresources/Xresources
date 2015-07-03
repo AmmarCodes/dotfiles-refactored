@@ -38,7 +38,6 @@ URxvt.font-size.zoomfont: xft:DejaVu Sans Mono:pixelsize=8
 URxvt.font-size.step: 2
 URxvt.keysym.C-Up:   perl:font-size:increase
 URxvt.keysym.C-Down: perl:font-size:decrease
-URxvt.keysym.C-Left: perl:font-size:reset
 
 ! Fix font space
 URxvt*letterSpace: 0
