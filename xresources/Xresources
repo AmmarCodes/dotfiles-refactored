@@ -78,4 +78,4 @@ URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
 
 !#include "/home/ammar/dotfiles/xresources/colorschemes/XresourceTomorrowNightEighties"
-#include "/home/ammar/dotfiles/xresources/colorschemes/material-theme.txt"
+#include "/home/ammar/dotfiles/xresources/colorschemes/gruvbox-dark.xresources"
