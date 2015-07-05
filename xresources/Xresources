@@ -7,6 +7,8 @@ Xft.antialias:              true
 Xft.rgba:                   rgb
 Xft.hinting:                true
 Xft.hintstyle:              hintslight
+Xft.autohint:               false
+Xft.lcdfilter:              lcddefault
 
 !-------------------------------------------------------------------------------
 ! URxvt settings
@@ -33,8 +35,8 @@ URxvt*termName: xterm-256color
 ! Fonts
 URxvt.allow_bold:           false
 /*URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1*/
-URxvt*font:               xft:DejaVu Sans Mono:size=10:antialias=false:hinting=true
-URxvt.font-size.zoomfont: xft:DejaVu Sans Mono:pixelsize=8
+URxvt*font:               xft:Droid Sans Mono for Powerline:size=10:antialias=false:hinting=true, xft:DejaVu Sans Mono
+URxvt.font-size.zoomfont: xft:Droid Sans Mono for Powerline:pixelsize=8
 URxvt.font-size.step: 2
 URxvt.keysym.C-Up:   perl:font-size:increase
 URxvt.keysym.C-Down: perl:font-size:decrease
