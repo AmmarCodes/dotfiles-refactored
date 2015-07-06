@@ -8,8 +8,8 @@ Plug 'pbrisbin/vim-mkdir'
 Plug 'itchyny/lightline.vim'
 
 " colorschemes
-" Plug 'morhetz/gruvbox'
-Plug 'w0ng/vim-hybrid'
+Plug 'morhetz/gruvbox'
+" Plug 'w0ng/vim-hybrid'
 " Plug 'yosiat/oceanic-next-vim'
 " Plug 'altercation/vim-colors-solarized'
 
@@ -65,7 +65,7 @@ set undodir=~/.nvim/undo
 " colorscheme
 syntax on
 set background=dark
-colorscheme default
+colorscheme gruvbox
 set t_Co=256
 "let &t_AB="\e[48;5;%dm"
 "let &t_AF="\e[38;5;%dm"
@@ -150,7 +150,7 @@ let g:php_cs_fixer_enable_default_mapping = 0
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'default',
+      \ 'colorscheme': 'jellybeans',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'filename' ] ],
