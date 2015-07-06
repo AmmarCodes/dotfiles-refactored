@@ -77,4 +77,4 @@ xset r rate 250 25 &
 # Run rxvt daemon
 urxvtd &
 # Trayer
-sleep 3; trayer  --width 50 --widthtype pixel --edge top --height 15 --align right --distance 400 --distancefrom right --transparent true --tint 0xff232425 --alpha 0 &
+sleep 3; trayer  --width 50 --widthtype pixel --edge top --height 15 --align right  --transparent true --tint 0xff232425 --alpha 0

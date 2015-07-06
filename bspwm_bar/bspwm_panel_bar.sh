@@ -77,7 +77,7 @@ while read -r line ; do
             ;;
     esac
     if [ $monitors == 2 ]; then 
-        printf "%s\n" "%{l}$wm_infos %{c}$title %{r}$sys_infos%{S+}%{l}$wm_infos %{r} $sys_infos"
+        printf "%s\n" "%{l}$wm_infos %{c}$title %{r}$sys_infos$PAD$PAD$PAD$PAD%{S+}%{l}$wm_infos %{r} $sys_infos"
     else
         printf "%s\n" "%{l}$wm_infos %{c}$title %{r}$sys_infos"
     fi
