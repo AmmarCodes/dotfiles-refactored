@@ -7,13 +7,15 @@ xsetroot -cursor_name left_ptr
 
 # General config
 bspc config border_width        2
-bspc config window_gap          10
+bspc config window_gap          4
 
 bspc config top_padding         15
 bspc config split_ratio         0.52
 bspc config borderless_monocle  true
 bspc config gapless_monocle     true
 bspc config focus_by_distance   true
+bspc config focus_follows_pointer true
+
 
 # Colors
 bspc config normal_border_color "#332d29"
@@ -74,5 +76,5 @@ pnmixer &
 xset r rate 250 25 &
 # Run rxvt daemon
 urxvtd &
-# Stalonetray
-sleep 3; stalonetray &
+# Trayer
+sleep 3; trayer  --width 50 --widthtype pixel --edge top --height 15 --align right --distance 400 --distancefrom right --transparent true --tint 0xff232425 --alpha 0 &
