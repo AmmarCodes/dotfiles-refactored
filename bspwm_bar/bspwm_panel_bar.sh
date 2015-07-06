@@ -76,9 +76,9 @@ while read -r line ; do
             IFS=$NORMIFS
             ;;
     esac
+
+    printf "%s\n" "%{l}$wm_infos %{c}$title %{r}$sys_infos$PAD$PAD$PAD$PAD"
     if [ $monitors == 2 ]; then 
-        printf "%s\n" "%{l}$wm_infos %{c}$title %{r}$sys_infos$PAD$PAD$PAD$PAD%{S+}%{l}$wm_infos %{r} $sys_infos"
-    else
-        printf "%s\n" "%{l}$wm_infos %{c}$title %{r}$sys_infos"
+        printf "%{S+}%{l}$wm_infos %{r} $sys_infos"
     fi
 done
