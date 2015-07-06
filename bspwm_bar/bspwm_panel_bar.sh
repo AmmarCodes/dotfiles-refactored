@@ -68,7 +68,7 @@ while read -r line ; do
                                 BG=$U_BG
                                 ;;
                         esac
-                        wm_infos="${wm_infos}%{F$FG B$BG A:bspc desktop -f ${name}:} %{U$FG}%{+u}  %{-u} %{A B- F-}"
+                        wm_infos="${wm_infos}%{F$FG B$BG A:bspc desktop -f ${name}:} %{U$FG}%{+u}   %{-u} %{A B- F-}"
                         ;;
                 esac
                 shift

@@ -27,5 +27,6 @@ conky -c ~/dotfiles/bspwm_bar/bspwm_toggle_conkyrc > "$PANEL_FIFO" &
            -f "$FONT1" -f "$FONT2"\
            -B "$BAR_BG" \
            -F "$BAR_FG" \
+           -u 3
            | while read line; do eval "$line"; done &
 wait
