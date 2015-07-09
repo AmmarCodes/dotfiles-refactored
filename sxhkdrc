@@ -84,7 +84,7 @@ super + @button{1-3}
 	bspc pointer -u
 
 ##ROTATE TREE
-super + shift + r
+super + r
     bspc desktop -R 90
 
 # Show exit script
