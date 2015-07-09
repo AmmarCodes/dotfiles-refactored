@@ -39,6 +39,7 @@ Plug 'majutsushi/tagbar',        { 'on': 'TagbarToggle' }
 " Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
 Plug 'StanAngeloff/php.vim',     { 'for': 'php' }
 Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
+Plug 'dericofilho/vim-phpfmt', { 'for': 'php' }
 Plug 'HTML-AutoCloseTag', { 'for': ['php', 'html'] }
 Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'cakebaker/scss-syntax.vim', { 'for': ['css', 'scss'] }
@@ -147,6 +148,8 @@ endif
 let g:php_cs_fixer_verbose = 1
 let g:php_cs_fixer_config_file = "~/.php_cs"
 let g:php_cs_fixer_enable_default_mapping = 0
+
+let g:phpfmt_config = "/home/ammar/dotfiles/php.tools.ini"
 
 " Lightline
 let g:lightline = {
