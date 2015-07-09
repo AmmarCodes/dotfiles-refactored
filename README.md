@@ -26,6 +26,7 @@ Other than default i3 key bindings, There's:
 - zsh, with [prezto](https://github.com/sorin-ionescu/prezto).
 - openssh
 - tmux
+- xclip
 - i3-gaps-git lemonbar-xft-git dmenu2 dunst compton feh acpi sysstat
 - python-pip
 - bspwm vnstat sres-git pamixer sxhkd xtitle conky dzen2 unclutter wmname pnmixer wmctrl slop maim-git trayer-srg
