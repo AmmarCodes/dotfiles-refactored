@@ -17,7 +17,7 @@ Xft.lcdfilter:              lcddefault
 ! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
 !-------------------------------------------------------------------------------
 
-URxvt.depth:                32
+! URxvt.depth:                32
 URxvt.geometry:             65x15
 URxvt.transparent:          false
 URxvt.fading:               0
