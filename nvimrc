@@ -46,6 +46,7 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': ['css', 'scss'] }
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
 Plug 'pangloss/vim-javascript', { 'for': 'js' }
 Plug 'jelera/vim-javascript-syntax', { 'for': 'js' }
+Plug 'darthmall/vim-vue', { 'for': 'js' }
 Plug 'juvenn/mustache.vim', { 'for': ['js', 'mustache'] }
 
 call plug#end()
