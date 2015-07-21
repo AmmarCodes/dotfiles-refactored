@@ -36,6 +36,7 @@ while read -r line ; do
                     [OoFfUu]*)
                         # desktops
                         name=${item#?}
+                        symbol=
                         case $item in
                             O*)
                                 # focused occupied desktop
@@ -46,6 +47,7 @@ while read -r line ; do
                                 # focused free desktop
                                 FG=$F_F_FG
                                 BG=$F_F_BG
+                                symbol=
                                 ;;
                             U*)
                                 # focused urgent desktop
@@ -61,14 +63,16 @@ while read -r line ; do
                                 # free desktop
                                 FG=$F_FG
                                 BG=$F_BG
+                                symbol=
                                 ;;
                             u*)
                                 # urgent desktop
                                 FG=$U_FG
                                 BG=$U_BG
+                                symbol=
                                 ;;
                         esac
-                        wm_infos="${wm_infos}%{F$FG B$BG A:bspc desktop -f ${name}:} %{U$FG}%{+u}   %{-u} %{A B- F-}"
+                        wm_infos="${wm_infos}%{F$FG B$BG A:bspc desktop -f ${name}:} %{U$FG} $symbol  %{A B- F-}"
                         ;;
                 esac
                 shift
