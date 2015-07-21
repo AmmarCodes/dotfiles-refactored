@@ -9,7 +9,7 @@ xsetroot -cursor_name left_ptr
 bspc config border_width        2
 bspc config window_gap          4
 
-bspc config top_padding         17
+bspc config bottom_padding      20
 bspc config split_ratio         0.52
 bspc config borderless_monocle  true
 bspc config gapless_monocle     true
@@ -50,6 +50,8 @@ bspc rule -a Thunar floating=on
 bspc rule -a Birdie floating=on
 bspc rule -a corebird floating=on
 bspc rule -a urxvt floating=on
+bspc rule -a xfce4-panel sticky=on
+
 
 ## Auto start
 #############
@@ -65,7 +67,7 @@ setxkbmap -layout us,ar -option grp:alt_shift_toggle
 # Compton
 compton -b --config ~/.compton.conf &
 # Lemonbar
-~/dotfiles/bspwm_bar/run.sh &
+# ~/dotfiles/bspwm_bar/run.sh &
 # Hide mouse cursor when idle
 unclutter -root -idle 1 &
 # Notification wrapper
@@ -77,4 +79,6 @@ xset r rate 250 25 &
 # Run rxvt daemon
 urxvtd &
 # Trayer
-sleep 3; trayer  --width 50 --widthtype pixel --edge top --height 15 --align right  --transparent true --tint 0xffDEDFE3 --alpha 0
+# sleep 3; trayer  --width 50 --widthtype pixel --edge top --height 15 --align right  --transparent true --tint 0xffDEDFE3 --alpha 0
+# Xfce panel
+sleep 3; xfce4-panel --disable-wm-check&
