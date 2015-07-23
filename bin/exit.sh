@@ -46,8 +46,8 @@ then
 
 elif [ "$exit_type" = "Shutdown" ]
 then
-    # Do Reboot here.
-    sudo shutdown -r now | zenity --progress --percentage=95 --title=Reboot --auto-close --auto-kill --no-cancel --width=300
+    # Do Shutdown here.
+    sudo shutdown -h now | zenity --progress --percentage=95 --title=Reboot --auto-close --auto-kill --no-cancel --width=300
 
 
 elif [ "$exit_type" = "Suspend" ]
