@@ -117,7 +117,7 @@ alt + {minus,equal}
 
 # run google chrome
 super + control + g
-    firefox-developer #chromium
+    google-chrome-stable
 
 super + d
     ~/dotfiles/bin/dmenuwrapper
