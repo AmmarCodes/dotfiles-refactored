@@ -27,7 +27,7 @@ URxvt.loginShell:           true
 URxvt.saveLines:            50
 URxvt.internalBorder:       0
 URxvt.lineSpace:            6
-URxvt.iconFile:             /usr/share/icons/Numix-Circle/scalable/apps/terminal.svg
+URxvt.iconFile:             /usr/share/icons/UltraFlatIcons/apps/scalable/terminal.svg
 URxvt.title:                Terminal
 XTerm*termName: xterm-256color
 URxvt*termName: xterm-256color
