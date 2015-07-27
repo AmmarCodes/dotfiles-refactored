@@ -83,8 +83,11 @@ rofi.fg: #ebdbb2
 rofi.hlbg: #32302f
 rofi.hlfg: #cc241d
 rofi.bc: #8ec07c
-rofi.bw: 1
-rofi.lines: 5
+rofi.bw: 0
+rofi.eh: 2
+rofi.width: 100
+rofi.padding: 400
+rofi.lines: 3
 rofi.opacity:100
 rofi.terminal: urxvtc
 rofi.font: Droid Sans Mono for Powerline 10
