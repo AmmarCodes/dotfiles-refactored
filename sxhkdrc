@@ -119,8 +119,8 @@ alt + {minus,equal}
 super + control + g
     google-chrome-stable
 
-super + d
-    ~/dotfiles/bin/dmenuwrapper
+# super + d
+#     ~/dotfiles/bin/dmenuwrapper
 
 super + e
     thunar

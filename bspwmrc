@@ -76,6 +76,8 @@ dunst -conf dunst/dunstrc &
 pnmixer &
 # Change keyboard repeating rate
 xset r rate 250 25 &
+# Rofi launcher (dmenu replacement)
+rofi -key-run mod4+d&
 # Run rxvt daemon
 urxvtd &
 # Trayer
