@@ -53,7 +53,8 @@ then
 elif [ "$exit_type" = "Suspend" ]
 then
     # Do suspend here.
-    sudo pm-suspend | zenity --progress --percentage=95 --title=Reboot --auto-close --auto-kill --no-cancel --width=300
+    # sudo pm-suspend | zenity --progress --percentage=95 --title=Reboot --auto-close --auto-kill --no-cancel --width=300
+    systemctl suspend
 
 
 elif [ "$exit_type" = "Hibernate" ]
