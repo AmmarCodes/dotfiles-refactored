@@ -41,7 +41,7 @@ Plug 'StanAngeloff/php.vim',     { 'for': 'php' }
 Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
 Plug 'dericofilho/vim-phpfmt', { 'for': 'php' }
 Plug 'HTML-AutoCloseTag', { 'for': ['php', 'html'] }
-Plug 'othree/html5.vim', { 'for': 'html' }
+Plug 'othree/html5.vim', { 'for': ['php', 'html'] }
 Plug 'cakebaker/scss-syntax.vim', { 'for': ['css', 'scss'] }
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
 Plug 'pangloss/vim-javascript', { 'for': 'js' }
