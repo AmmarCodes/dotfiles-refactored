@@ -94,6 +94,7 @@ hi CursorLine   cterm=NONE ctermbg=NONE ctermfg=NONE
 set number
 set pastetoggle =<f2>
 set noshowmode
+set shortmess=a " Reduce pressing enter when opening a file
 
 
 
@@ -151,6 +152,7 @@ let g:php_cs_fixer_config_file = "~/.php_cs"
 let g:php_cs_fixer_enable_default_mapping = 0
 
 let g:phpfmt_config = "/home/ammar/dotfiles/php.tools.ini"
+let g:phpfmt_on_save = get(g:, 'phpfmt_on_save', 0)
 
 " Lightline
 let g:lightline = {
