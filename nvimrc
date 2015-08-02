@@ -9,6 +9,7 @@ Plug 'itchyny/lightline.vim'
 
 " colorschemes
 Plug 'morhetz/gruvbox'
+Plug 'chriskempson/vim-tomorrow-theme'
 " Plug 'w0ng/vim-hybrid'
 " Plug 'yosiat/oceanic-next-vim'
 " Plug 'altercation/vim-colors-solarized'
@@ -67,7 +68,7 @@ set undodir=~/.nvim/undo
 " colorscheme
 syntax on
 set background=dark
-colorscheme gruvbox
+colorscheme Tomorrow-Night-Eighties
 set t_Co=256
 "let &t_AB="\e[48;5;%dm"
 "let &t_AF="\e[38;5;%dm"
