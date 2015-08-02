@@ -1,11 +1,10 @@
 # bspwm panel config
 
-geometry="x17"
-geometry_dual_screen="x17"
-# FONT1="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
-FONT1="Font Awesome-8"
-# FONT2="-gohu-gohufont-medium-r-normal--12-80-100-100-c-60-iso8859-1"
-FONT2="Cantarell-8"
+geometry="1356x14+5+5"
+FONT1="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
+# FONT1="Font Awesome-8"
+FONT2="-gohu-gohufont-medium-r-normal--12-80-100-100-c-60-iso8859-1"
+# FONT2="Cantarell-8"
 # FONT1="-lucy-tewi-medium-r-normal--11-90-75-75-p-58-iso10646-1"
 
 PAD="  "
@@ -13,14 +12,14 @@ RPAD="    "
 
 # color definitions
 
-BAR_BG="#FFDEDFE3"
-BAR_FG="#FF767E8A"
+BAR_BG="#FF1d1f21"
+BAR_FG="#FFc5c8c6"
 
-F_O_FG="#FF575F7B"
+F_O_FG="#FF0099cc"
 F_O_BG=${BAR_BG}
 F_F_FG=${F_O_FG}
 F_F_BG=${BAR_BG}
-F_U_FG="#FFDEDFE2"
+F_U_FG="#FF0066cc"
 F_U_BG=${BAR_BG}
 O_FG="#FF878F9B"
 O_BG=${BAR_BG}

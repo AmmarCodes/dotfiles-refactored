@@ -36,7 +36,7 @@ while read -r line ; do
                     [OoFfUu]*)
                         # desktops
                         name=${item#?}
-                        symbol=
+                        symbol=
                         case $item in
                             O*)
                                 # focused occupied desktop
@@ -47,7 +47,7 @@ while read -r line ; do
                                 # focused free desktop
                                 FG=$F_F_FG
                                 BG=$F_F_BG
-                                symbol=
+                                symbol=
                                 ;;
                             U*)
                                 # focused urgent desktop
@@ -63,7 +63,7 @@ while read -r line ; do
                                 # free desktop
                                 FG=$F_FG
                                 BG=$F_BG
-                                symbol=
+                                symbol=
                                 ;;
                             u*)
                                 # urgent desktop
