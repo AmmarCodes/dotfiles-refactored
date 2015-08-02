@@ -72,7 +72,7 @@ while read -r line ; do
                                 symbol=
                                 ;;
                         esac
-                        wm_infos="${wm_infos}%{F$FG B$BG A:bspc desktop -f ${name}:} %{U$FG} $symbol  %{A B- F-}"
+                        wm_infos="${wm_infos}%{F$FG B$BG A:bspc desktop -f ${name}:} %{U$FG}$symbol%{A B- F-}"
                         ;;
                 esac
                 shift
