@@ -78,20 +78,19 @@ URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
 
 ! Rofi config
-rofi.bg: #282828
-rofi.fg: #ebdbb2
-rofi.hlbg: #32302f
-rofi.hlfg: #cc241d
-rofi.bc: #8ec07c
+rofi.bg: #1d1f21
+rofi.fg: #c5c8c6
+rofi.hlbg: #2d2f31
+rofi.hlfg: #b294bb
+rofi.bc: #1d1f21
+rofi.eh: 1
 rofi.bw: 0
-rofi.eh: 2
-rofi.width: 100
-rofi.padding: 400
+rofi.width: 40
 rofi.lines: 3
 rofi.opacity:100
 rofi.terminal: urxvtc
-rofi.font: Droid Sans Mono for Powerline 10
-rofi.fuzzy: true
+rofi.font: Terminus 8
+rofi.yoffset: -344
 
 !#include "/home/ammar/dotfiles/xresources/colorschemes/XresourceTomorrowNightEighties"
 #include "/home/ammar/dotfiles/xresources/colorschemes/gruvbox-dark.xresources"
