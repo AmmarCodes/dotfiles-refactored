@@ -81,7 +81,7 @@ while read -r line ; do
             ;;
     esac
 
-    printf "%s\n" "%{l}$wm_infos %{c}$title %{r}$sys_infos$PAD$PAD$PAD$PAD"
+    printf "%s\n" "%{l}$wm_infos %{c}$title %{r}$sys_infos$PAD$PAD$PAD"
     # if [ $monitors == 2 ]; then 
     #     printf "%{S+}%{l}$wm_infos %{r} $sys_infos"
     # fi

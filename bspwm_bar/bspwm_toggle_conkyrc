@@ -40,10 +40,6 @@ ${endif}\
 %{F\#FF6C6C6C}|\
 ${if_match "${acpiacadapter}" == "on-line"}\
 %{F\#FFCD533C}%{F-} \
-${if_match ${battery_percent} >= 95}\
-${else}\
-${battery_percent}% \
-${endif}\
 ${else}\
 ${if_match ${battery_percent BAT0} <= 30}\
 %{F\#FFFF8700}%{F-} \
@@ -53,7 +49,8 @@ ${if_match ${battery_percent BAT0} <= 50}\
 ${else}\
 %{F\#FF448855}%{F-} \
 ${endif}\
-${battery_percent}% \
 ${endif}\
+${endif}\
+${battery_percent BAT0}% \
 %{F\#FF6C6C6C}|%{F\#FF81a2be A:dzen_popup_toggle.sh calendar:} ${time %a, %d %b}%{F-} ${time %I:%M} %{A}\
 
