@@ -20,11 +20,13 @@ Plug 'ap/vim-buftabline'
 " Plug 'Shougo/vimfiler.vim'
 " Plug 'scrooloose/nerdtree'
 
+
 " Editing
 Plug 'junegunn/vim-easy-align',  { 'on': '<plug>(LiveEasyAlign)' }
 Plug 'kien/ctrlp.vim', { 'on': ['CtrlP', 'CtrlPTag'] }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'myusuf3/numbers.vim'
+Plug 'rstacruz/vim-closer'
 
 " Git
 Plug 'tpope/vim-fugitive'
