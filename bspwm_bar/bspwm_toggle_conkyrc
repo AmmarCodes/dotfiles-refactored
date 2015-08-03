@@ -25,13 +25,17 @@ out_to_x no
 # %{F\#FFF7A248 A:dzen_popup_toggle.sh netinfo:}%{F-} \
 # ${wireless_essid wlp4s0} %{A}${else}\
 # %{F\#FF6C6C6C}✘ %{F-}${endif}\
+#
+# If bargoggle == 1 use:   
+# else use:   
+#
 
 TEXT
 S\
-${if_match "${exec cat /tmp/bartoggle}" == "1"}%{F\#FF6C6C6C A:toggleinfo.sh:}  %{A}\
+${if_match "${exec cat /tmp/bartoggle}" == "1"}%{F\#FF6C6C6C A:toggleinfo.sh:}%{A}\
 %{F\#FFde935f A:dzen_popup_toggle.sh sysinfo:}  %{F-}${cpu cpu0}%%{A} \
 %{F\#FFcc6666 A:dzen_popup_toggle.sh diskinfo:}  %{F-}${mem} %{A}\
-${else} %{F\#FF6C6C6C A:toggleinfo.sh:}  %{A}\
+${else} %{F\#FF6C6C6C A:toggleinfo.sh:}%{A}\
 ${endif}\
 %{F\#FF6C6C6C}|\
 ${if_match "${acpiacadapter}" == "on-line"}\
