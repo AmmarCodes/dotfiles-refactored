@@ -16,8 +16,8 @@ Plug 'chriskempson/vim-tomorrow-theme'
 
 " Vim customization
 Plug 'ap/vim-buftabline'
-" Plug 'Shougo/unite.vim'
-" Plug 'Shougo/vimfiler.vim'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/vimfiler.vim'
 " Plug 'scrooloose/nerdtree'
 
 
@@ -239,7 +239,7 @@ nmap <A-Up> :m -2<cr>
 nmap <A-Down> :m +1<cr>
 
 " File Explorer
-nnoremap <leader>b    :Explore<cr>
+nnoremap <leader>b    :VimFilerExplore<cr>
 nnoremap <cr>         :noh<cr><cr>
 
 " Fix php file using php-cs-fixer
