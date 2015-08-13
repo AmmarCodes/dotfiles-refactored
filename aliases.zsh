@@ -2,6 +2,9 @@
 alias vim="nvim"
 alias vi="nvim"
 
+# Tmux
+alias tmux="tmux -2"
+
 # Vagrant
 alias vu='vagrant up'
 alias vs='vagrant ssh'
@@ -22,3 +25,7 @@ alias d="deletemark"
 alias p="showmarks"
 alias l="showmarks"
 
+# Find files
+f() {
+    ag --smart-case --hidden -g $1
+}
