@@ -21,6 +21,7 @@ xrdb -load /home/ammar/dotfiles/xresources/Xresources
 #
 # exec $1
 
-sxhkd &
-redshift &
-exec dbus-launch --exit-with-session bspwm
+# sxhkd &
+# redshift &
+# exec dbus-launch --exit-with-session bspwm
+exec dbus-launch xfce4-session
