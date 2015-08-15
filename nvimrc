@@ -9,7 +9,7 @@ Plug 'itchyny/lightline.vim'
 
 " colorschemes
 Plug 'morhetz/gruvbox'
-Plug 'chriskempson/vim-tomorrow-theme'
+" Plug 'chriskempson/vim-tomorrow-theme'
 " Plug 'w0ng/vim-hybrid'
 " Plug 'yosiat/oceanic-next-vim'
 " Plug 'altercation/vim-colors-solarized'
@@ -38,6 +38,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'mattn/emmet-vim', { 'on': ['php', 'html', 'css', 'scss']}
 Plug 'majutsushi/tagbar',        { 'on': 'TagbarToggle' }
 " Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
 Plug 'StanAngeloff/php.vim',     { 'for': 'php' }
@@ -192,6 +193,10 @@ let b:javascript_fold=0
 
 " Mustache vim 
 let g:mustache_abbreviations = 1
+
+" Emmet
+" expand with tab
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 """""""""""""""""""""""
 " Functions
