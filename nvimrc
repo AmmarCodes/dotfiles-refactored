@@ -5,17 +5,19 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-vinegar'
 Plug 'pbrisbin/vim-mkdir'
-Plug 'itchyny/lightline.vim'
+" Plug 'itchyny/lightline.vim'
+Plug 'bling/vim-airline'
 
 " colorschemes
 Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
 " Plug 'chriskempson/vim-tomorrow-theme'
 " Plug 'w0ng/vim-hybrid'
 " Plug 'yosiat/oceanic-next-vim'
 " Plug 'altercation/vim-colors-solarized'
 
 " Vim customization
-Plug 'ap/vim-buftabline'
+" Plug 'ap/vim-buftabline'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler.vim'
 " Plug 'scrooloose/nerdtree'
@@ -39,7 +41,7 @@ Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mattn/emmet-vim', { 'on': ['php', 'html', 'css', 'scss']}
-Plug 'majutsushi/tagbar',        { 'on': 'TagbarToggle' }
+Plug 'majutsushi/tagbar',
 " Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
 Plug 'StanAngeloff/php.vim',     { 'for': 'php' }
 Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
@@ -71,7 +73,7 @@ set undodir=~/.nvim/undo
 " colorscheme
 syntax on
 set background=dark
-colorscheme gruvbox
+colorscheme PaperColor
 set t_Co=256
 "let &t_AB="\e[48;5;%dm"
 "let &t_AF="\e[38;5;%dm"
@@ -282,6 +284,10 @@ nnoremap <F3> :NumbersToggle<CR>
 " Trim trailing spaces, using local functions inside n/vimrc
 nnoremap <leader>ws :TrimWhiteSpace()<CR>
 
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme="PaperColor"
 
 
 """""""""""""""""""""""""
