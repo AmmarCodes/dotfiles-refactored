@@ -26,5 +26,5 @@ export PATH=$PATH:/$HOME/.composer/vendor/bin:.vendor/bin/:.:~/.gem/ruby/2.2.0/b
 export EDITOR=nvim
 
 # Base16 Shell
-# BASE16_SHELL="$HOME/dotfiles/base16-shell/base16-eighties.dark.sh"
-# [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+BASE16_SHELL="$HOME/dotfiles/base16-shell/base16-eighties.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
