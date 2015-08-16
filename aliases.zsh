@@ -29,3 +29,9 @@ alias l="showmarks"
 f() {
     ag --smart-case --hidden -g $1
 }
+
+# Remaining todos in the current folder
+todos() {
+    autoload colors; colors;
+    echo "You have: ($fg_bold[red]`ag -i @todo . | wc -l`$fg[white]) todos left."
+}
