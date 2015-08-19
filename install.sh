@@ -48,3 +48,4 @@ ln -s ~/dotfiles/sxhkdrc ~/.config/sxhkd/sxhkdrc
 ln -s ~/dotfiles/redshift.conf ~/.config/redshift.conf
 ln -s ~/dotfiles/ssh_config ~/.ssh/config
 ln -s ~/dotfiles/npmrc ~/.npmrc
+ln -s ~/dotfiles/terminalrc ~/.config/xfce4/terminal
