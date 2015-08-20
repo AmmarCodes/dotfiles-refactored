@@ -19,10 +19,9 @@ ScrollingLines=999999
 BackgroundDarkness=1.000000
 FontName=Droid Sans Mono for Powerline 11
 FontAllowBold=FALSE
-ColorCursor=#d3d0c8
-ColorForeground=#d3d0c8
-ColorBackground=#2d2d2d
-ColorBoldUseDefault=FALSE
-ColorPalette=#2d2d2d;#f2777a;#99cc99;#ffcc66;#6699cc;#cc99cc;#66cccc;#d3d0c8;#747369;#f99157;#393939;#515151;#a09f93;#e8e6df;#d27b53;#f2f0ec
+ColorCursor=#4d4d4d4d4c4c
+ColorForeground=#4d4d4d4d4c4c
+ColorBackground=#eeeeeeeeeeee
+ColorPalette=#edededededed;#d7d700005f5f;#71718c8c0000;#d7d75f5f0000;#42427171aeae;#89895959a8a8;#3e3e99999f9f;#4d4d4d4d4c4c;#969696969494;#d7d700005f5f;#71718c8c0000;#d7d75f5f0000;#42427171aeae;#89895959a8a8;#3e3e99999f9f;#4d4d4d4d4c4c
 TabActivityColor=#dc322f
 
