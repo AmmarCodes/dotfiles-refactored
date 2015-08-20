@@ -1,6 +1,7 @@
 # NeoVim
 alias vim="nvim"
 alias vi="nvim"
+alias v="nvim"
 
 # Tmux
 alias tmux="tmux -2"
