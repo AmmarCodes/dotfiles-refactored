@@ -72,7 +72,7 @@ set undodir=~/.nvim/undo
 
 " colorscheme
 syntax on
-set background=dark
+set background=light
 colorscheme PaperColor
 set t_Co=256
 "let &t_AB="\e[48;5;%dm"
