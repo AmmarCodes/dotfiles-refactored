@@ -2,7 +2,7 @@
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBordersDefault=TRUE
-MiscCursorBlinks=FALSE
+MiscCursorBlinks=TRUE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
 MiscDefaultGeometry=80x24
 MiscInheritGeometry=FALSE
@@ -18,10 +18,12 @@ MiscHighlightUrls=TRUE
 ScrollingLines=999999
 BackgroundDarkness=1.000000
 FontName=Droid Sans Mono for Powerline 11
-FontAllowBold=FALSE
-ColorCursor=#4d4d4d4d4c4c
-ColorForeground=#4d4d4d4d4c4c
-ColorBackground=#eeeeeeeeeeee
-ColorPalette=#edededededed;#d7d700005f5f;#71718c8c0000;#d7d75f5f0000;#42427171aeae;#89895959a8a8;#3e3e99999f9f;#4d4d4d4d4c4c;#969696969494;#d7d700005f5f;#71718c8c0000;#d7d75f5f0000;#42427171aeae;#89895959a8a8;#3e3e99999f9f;#4d4d4d4d4c4c
+FontAllowBold=FALSEA
+ColorForeground=#ebdbb2
+ColorBackground=#282828
+ColorPalette=#cc241d;#fb4934;#98971a;#d79921;#458588;#b16286;#689d6a;#a89984;#928374;#fb4934;#b8bb26;#fabd2f;#83a598;#d3869b;#8ec07c;#ebdbb2
+ColorCursor=#d3d0c8
 TabActivityColor=#dc322f
+TitleInitial=
+TitleMode=TERMINAL_TITLE_REPLACE
 

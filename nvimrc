@@ -72,8 +72,8 @@ set undodir=~/.nvim/undo
 
 " colorscheme
 syntax on
-set background=light
-colorscheme PaperColor
+set background=dark
+colorscheme gruvbox
 set t_Co=256
 "let &t_AB="\e[48;5;%dm"
 "let &t_AF="\e[38;5;%dm"
@@ -287,7 +287,7 @@ nnoremap <leader>ws :TrimWhiteSpace()<CR>
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme="PaperColor"
+let g:airline_theme="gruvbox"
 
 
 """""""""""""""""""""""""
