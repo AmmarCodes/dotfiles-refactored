@@ -21,7 +21,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler.vim'
 " Plug 'scrooloose/nerdtree'
-
+Plug 'mhinz/vim-startify'
 
 " Editing
 Plug 'junegunn/vim-easy-align',  { 'on': '<plug>(LiveEasyAlign)' }
@@ -75,6 +75,12 @@ syntax on
 set background=dark
 colorscheme gruvbox
 set t_Co=256
+if has("gui_running")
+    set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 11
+    set guioptions-=T
+    set nonu
+    set linespace=3
+endif
 "let &t_AB="\e[48;5;%dm"
 "let &t_AF="\e[38;5;%dm"
 
