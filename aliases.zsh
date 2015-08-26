@@ -31,6 +31,11 @@ f() {
     ag --smart-case --hidden -g $1
 }
 
+# Remove orphans packages
+orphans() {
+    sudo pacman -Rns $(pacman -Qtdq)
+}
+
 # Remaining todos in the current folder
 todos() {
     autoload colors; colors;
