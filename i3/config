@@ -173,6 +173,15 @@ bar {
     position top
     separator_symbol "|"
     tray_output LVDS # Show the tray only on the main laptop monitor
+  colors {
+    separator #928374
+    background #282828
+    statusline #ebdbb2
+    focused_workspace #98971a #98971a #282828
+    active_workspace #282828 #282828 #ebdbb2
+    inactive_workspace #282828 #282828 #928374
+    urgent_workspace #fabd2f #fabd2f #ebdbb2
+  }
 }
 
 workspace_auto_back_and_forth yes
@@ -300,7 +309,7 @@ exec_always --no-startup-id ~/dotfiles/bin/set_bg
 # exec_always --no-startup-id ~/dotfiles/bar/lemonbar.sh
 
 # Colorscheme - set using i3-style seti
-client.focused #0088CC #0088CC #ffffff #dddddd
-client.focused_inactive #333333 #333333 #888888 #292d2e
-client.unfocused #333333 #333333 #888888 #292d2e
-client.urgent #2f343a #900000 #ffffff #900000
+client.focused #458588 #458588 #282828 #282828
+client.focused_inactive #282828 #282828 #928374 #282828
+client.unfocused #282828 #282828 #928374 #282828
+client.urgent #282828 #fabd2f #ebdbb2 #cc241d
