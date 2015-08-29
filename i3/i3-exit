@@ -1,6 +1,6 @@
 #!/bin/sh
 lock() {
-    slimlock
+    ~/dotfiles/bin/lock.sh
 }
 
 case "$1" in
@@ -11,7 +11,7 @@ case "$1" in
         i3-msg exit
         ;;
     suspend)
-        sudo pm-suspend && lock
+        systemctl suspend && lock
         ;;
     hibernate)
         sudo pm-hibernate && lock
