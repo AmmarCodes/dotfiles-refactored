@@ -1,151 +1,137 @@
+set nocompatible
+
 call plug#begin('~/.vim/plugged')
 
-" Basic stuff
 Plug 'tpope/vim-sensible'
-Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-vinegar'
 Plug 'pbrisbin/vim-mkdir'
+" Plug 'itchyny/lightline.vim'
+Plug 'bling/vim-airline'
 
-" Colorscheme
-" Plug 'flazz/vim-colorschemes'
-" Plug 'nanotech/jellybeans.vim'
-Plug 'chriskempson/base16-vim'
+" colorschemes
+Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
+" Plug 'chriskempson/vim-tomorrow-theme'
+" Plug 'w0ng/vim-hybrid'
+" Plug 'yosiat/oceanic-next-vim'
+" Plug 'altercation/vim-colors-solarized'
+
+" Vim customization
+" Plug 'ap/vim-buftabline'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/vimfiler.vim'
+" Plug 'scrooloose/nerdtree'
+Plug 'mhinz/vim-startify'
 
 " Editing
-Plug 'godlygeek/tabular'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'ervandew/supertab'
-Plug 'Shougo/neocomplete.vim'
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
-Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
+Plug 'junegunn/vim-easy-align',  { 'on': '<plug>(LiveEasyAlign)' }
+Plug 'kien/ctrlp.vim', { 'on': ['CtrlP', 'CtrlPTag'] }
 Plug 'terryma/vim-multiple-cursors'
-Plug 'dietsche/vim-lastplace'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'scrooloose/nerdtree' ", { 'on': 'NERDTreeToggle' }
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'scrooloose/nerdcommenter'
-Plug 'bling/vim-bufferline'
 Plug 'myusuf3/numbers.vim'
+Plug 'rstacruz/vim-closer'
 
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " Development
-Plug 'skammer/vim-css-color', {'for': 'css'}
 Plug 'scrooloose/syntastic'
-Plug 'shawncplus/phpcomplete.vim', {'for': 'php'}
-Plug 'StanAngeloff/php.vim', {'for': 'php'}
-" Plug 'spf13/PIV', {'for': 'php'}
-Plug 'xsbeats/vim-blade', {'for': 'php'}
-Plug 'sudar/vim-wordpress-snippets', {'for': 'php'}
-Plug 'dsawardekar/wordpress.vim', {'for': 'php'}
-Plug 'pangloss/vim-javascript', {'for': 'javascript'}
-Plug 'othree/javascript-libraries-syntax.vim', {'for': 'javascript'}
-Plug 'othree/html5.vim', {'for': ['html', 'php']}
-Plug 'HTML-AutoCloseTag', {'for': ['html', 'php']}
-Plug 'mattn/emmet-vim', {'for': ['html', 'php']}
-Plug 'Valloric/MatchTagAlways', {'for': ['html', 'php']}
-Plug 'majutsushi/tagbar'
-
-" Misc
-Plug 'Chiel92/vim-autoformat'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags'
+Plug 'tomtom/tcomment_vim'
+Plug 'ervandew/supertab'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'mattn/emmet-vim', { 'on': ['php', 'html', 'css', 'scss']}
+Plug 'majutsushi/tagbar',
+" Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
+Plug 'StanAngeloff/php.vim',     { 'for': 'php' }
+Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
+Plug 'dericofilho/vim-phpfmt', { 'for': 'php' }
+Plug 'HTML-AutoCloseTag', { 'for': ['php', 'html'] }
+Plug 'othree/html5.vim', { 'for': ['php', 'html'] }
+Plug 'cakebaker/scss-syntax.vim', { 'for': ['css', 'scss'] }
+Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
+Plug 'pangloss/vim-javascript', { 'for': 'js' }
+Plug 'jelera/vim-javascript-syntax', { 'for': 'js' }
+Plug 'darthmall/vim-vue', { 'for': 'js' }
+Plug 'juvenn/mustache.vim', { 'for': ['js', 'mustache'] }
 
 call plug#end()
 
-syntax enable
-set t_Co=256
-set background=dark
 
-let g:base16colorspace=256
-colorscheme base16-eighties
+"""""""""""""""""""""""""
+" General config
+"""""""""""""""""""""""""
+let mapleader =','
 
 " Set local directories
 "----------------------
 
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
-set undodir=~/.vim/undo
+set backupdir=~/.nvim/backups
+set directory=~/.nvim/swaps
+set undodir=~/.nvim/undo
 
-" General Settings
-"-----------------
-set nowrap                      " don't wrap lines
-set tabstop=4                   " a tab is four spaces
-set smarttab
-set softtabstop=4               " when hitting <BS>, pretend like a tab is removed, even if spaces
-set expandtab                   " expand tabs by default (overloadable per file type later)
-set shiftwidth=4                " number of spaces to use for autoindenting
-set shiftround                  " use multiple of shiftwidth when indenting with '<' and '>'
-set backspace=indent,eol,start  " allow backspacing over everything in insert mode
-set autoindent                  " always set autoindenting on
-set copyindent                  " copy the previous indentation on autoindenting
-set number                      " always show line numbers
-set ignorecase                  " ignore case when searching
-set smartcase                   " ignore case if search pattern is all lowercase
+" colorscheme
+syntax on
+set background=dark
+colorscheme gruvbox
+set t_Co=256
+if has("gui_running")
+    set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 11
+    set guioptions-=T
+    set nonu
+    set linespace=3
+endif
+"let &t_AB="\e[48;5;%dm"
+"let &t_AF="\e[38;5;%dm"
+
+set nowrap
+set autoindent
+set autoread
+set incsearch       " Incremental search
+" mouse active only in normal and visual mode
+set mouse       =nv
+" set pastetoggle =<F2>
+set smartcase       " Case insensitive searches become sensitive with capitals
+set smarttab        " sw at the start of the line, sts everywhere else
+set shiftwidth  =4
+set softtabstop =4
+set tabstop     =4
+set expandtab
+set ignorecase
+set showmatch
 set incsearch
-set hlsearch " Highlight searches
-set autowrite  "Save on buffer switch
-set mouse=a
-set title " Show the filename in the window titlebar.
-set ttyfast " Send more characters at a given time.
-set hidden
+set hls
+set cursorline
+hi CursorLine   cterm=NONE ctermbg=NONE ctermfg=NONE
+set number
+set pastetoggle =<f2>
+set noshowmode
+set shortmess=a " Reduce pressing enter when opening a file
+
+
+
 " always ignore these files
 set wildignore+=*/vendor/**,*/wordpress/**,*/node_modules/**,*/nbproject/**
-set nofoldenable " disable folding
-set encoding=utf-8
-scriptencoding utf-8
-set pastetoggle=<F2> " paste toggle
 
-" Manual Status line
-let &statusline  = "%#StatusLineNC# %{getcwd()==$HOME?'~':fnamemodify(getcwd(), ':t')} %* "
-let &statusline .= "%f "
-let &statusline .= "%#StatusLineNC#%{StatuslineGit()} %* "
-let &statusline .= '%1*%{&modified && !&readonly?"\u25cf":""}%*'
-let &statusline .= '%1*%{&modified && &readonly?"\u25cb":""}%*'
-let &statusline .= '%2*%{&modifiable?"":"\u25cb"}%*'
-let &statusline .= '%3*%{&readonly && &modifiable && !&modified?"\u25cb":""}%*'
-let &statusline .= "%="
-let &statusline .= "%#StatusLineNC#%{StatuslineIndent()}%* "
-let &statusline .= '%#StatuslineNC#%{(strlen(&fileencoding) && &fileencoding !=# &encoding)?&fileencoding." ":""}'
-let &statusline .= '%{&fileformat!="unix"?" (".&fileformat.") ":""}%*'
-let &statusline .= '%{strlen(&filetype)?&filetype." ":""}'
-let &statusline .= '%#Error#%{exists("*SyntasticStatuslineFlag")?SyntasticStatuslineFlag():""}%*'
+" Add ability to center the view on the last line
+set scrolloff   =4
+set sidescroll  =5
 
-function! StatuslineGit()
-  if !exists('*fugitive#head')
-    return ''
-  endif
-  let l:out = fugitive#head(8)
-  if l:out !=# ''
-    let l:out = ' @ ' . l:out
-  endif
-  return l:out
-endfunction
 
-function! StatuslineIndent()
-  if !&modifiable
-    return ''
-  endif
-  let l:symbol = &expandtab ? "\u2022" : "\u21e5 "
-  let l:amount = exists('*shiftwidth') ? shiftwidth() : &shiftwidth
-  return &expandtab ? repeat(l:symbol, l:amount) : l:symbol
-endfunction
+" show trailing whitespaces
+set list
+set listchars   =tab:▸\ ,trail:¬,nbsp:.,extends:❯,precedes:❮
 
-" Plugin Config
-"--------------
 
-" Numbers
-nnoremap <F3> :NumbersToggle<CR>
-" nnoremap <F4> :NumbersOnOff<CR>
 
-" Open NERDTree for the current file argument e.g. gvim .
-if isdirectory(argv(0))
-    bd
-    autocmd vimenter * exe "cd" argv(0)
-    autocmd VimEnter * NERDTree
-endif
+"""""""""""""""""""""""""
+" Plugins config
+"""""""""""""""""""""""""
+" VimFiler config
+set fillchars                   =vert:│,fold:─
+let g:vimfiler_tree_leaf_icon   ="⋮"
+let g:vimfiler_tree_opened_icon ="▼"
+let g:vimfiler_tree_closed_icon ="▷"
 
 " CtrlP
 let g:ctrlp_match_window_bottom = 0 " Show at top of window
@@ -172,90 +158,154 @@ if executable('ag')
     let g:ctrlp_use_caching = 0
 endif
 
-" WordPress
-let g:wordpress_vim_wordpress_path = '/home/ammar/www/aliqtisadi/wordpress'
+" PHP-CS-Fixer
+let g:php_cs_fixer_verbose = 1
+let g:php_cs_fixer_config_file = "~/.php_cs"
+let g:php_cs_fixer_enable_default_mapping = 0
 
-" NerdTREE
-let NERDTreeIgnore = ['node_modules', 'nbproject']
+let g:phpfmt_config = "/home/ammar/dotfiles/php.tools.ini"
+let g:phpfmt_on_save = get(g:, 'phpfmt_on_save', 0)
 
-" Lastplace
-let g:lastplace_ignore = "gitcommit,svn"
+" Lightline
+let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'filename' ] ],
+      \   'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+      \ },
+      \ 'component_function': {
+      \   'fugitive': 'MyFugitive',
+      \ },
+      \ 'component_expand': {
+      \   'syntastic': 'SyntasticStatuslineFlag',
+      \ },
+      \ 'component': {
+      \   'readonly': '%{&readonly?"":""}',
+      \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))'
+      \ },
+      \ }
 
-" NERD Commenter
-let NERDSpaceDelims=1 " add space between comment delimiter and first  character of code
+" Ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
 
 " Syntastic
-let g:syntastic_error_symbol = '✘'
-let g:syntastic_warning_symbol = "▲"
-let g:syntastic_php_checkers = ['php', 'phpcs']
-let g:syntastic_php_phpcs_post_args = " --encoding=utf-8"
-let g:syntastic_php_phpcs_post_args .= " --config=~/.php_cs"
+let g:syntastic_php_checkers = ['php']
 
-" xolox/vim-easytags settings
-set tags=~/.vimtags " Where to look for tags files
-let g:easytags_events = ['BufReadPost', 'BufWritePost']
-let g:easytags_async = 1
-let g:easytags_dynamic_files = 2
-let g:easytags_resolve_links = 1
-let g:easytags_suppress_ctags_warning = 1
-let g:easytags_file = "~/.vim/tags"
+" vim-javascript
+let javascript_enable_domhtmlcss=1
+let b:javascript_fold=0
 
-" JavaScript Libraries Syntax
-let g:used_javascript_libs = 'angular, jquery'
+" Mustache vim 
+let g:mustache_abbreviations = 1
 
-" neocomplete
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_auto_select = 0
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
+" Emmet
+" expand with tab
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
-" neosnippet
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+"""""""""""""""""""""""
+" Functions
+"""""""""""""""""""""""
+" Removes trailing spaces
+if !exists("*TrimWhiteSpace")
+    function TrimWhiteSpace()
+        %s/\s*$//
+        ''
+        :endfunction
+endif
+
+" Fugitive for lightline
+function! MyFugitive()
+  if exists("*fugitive#head")
+    let _ = fugitive#head()
+    return strlen(_) ? ' '._ : ''
+  endif
+  return ''
+endfunction
+
+"""""""""""""""""""""""""
+" Key-bindings
+"""""""""""""""""""""""""
+
+" Buffers
+nnoremap [b           :bprevious<cr>
+nnoremap ]b           :bnext<cr>
+nnoremap [B           :bfirst<cr>
+nnoremap ]B           :blast<cr>
+
+" Tabs
+nnoremap [t           :tabprevious<cr>
+nnoremap ]t           :tabnext<cr>
+nnoremap [T           :tabfirst<cr>
+nnoremap ]T           :tablast<cr>
+nnoremap <leader>t    :tabnew<cr>
+nnoremap <leader>w    :bw<cr>
+
+" Escape
+inoremap jf           <esc>
+
+" Move lines up and down, Alt+Up or Alt+Down
+nmap <A-Up> :m -2<cr>
+nmap <A-Down> :m +1<cr>
+
+" File Explorer
+nnoremap <leader>b    :VimFilerExplore<cr>
+nnoremap <cr>         :noh<cr><cr>
+
+" Fix php file using php-cs-fixer
+" autocmd BufRead *.php nmap <buffer> <leader>f :call PhpCsFixerFixFile()<cr><cr>
+" Fix php file using php-cs-fixer
+autocmd BufRead *.php nmap <buffer> <leader>f :!php-cs-fixer fix --config-file=./.php_cs %:p<cr><cr>
 
 
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
+" n/vimrc editing/reloading
+if has('nvim')
+    nnoremap <leader>ve   :e ~/.nvimrc<cr>
+    nnoremap <leader>vr   :source ~/.nvimrc<cr>
+else
+    nnoremap <leader>ve   :e ~/.vimrc<cr>
+    nnoremap <leader>vr   :source ~/.vimrc<cr>
+endif
 
-" PIV
-" let g:DisableAutoPHPFolding = 1
+" Beginning/ending of the current file, go to it, center the view, go to
+" visual mode
+nnoremap gg           ggzv
+nnoremap G            Gzv
 
+" plugins: vim-easy-align {{{2
+vmap <cr>      <plug>(LiveEasyAlign)
 
-" Key binding
-"------------
+" Tagbar Toggle
+nnoremap <f8>         :TagbarToggle<cr>
 
-" leader
-let mapleader=","
-" clear search by pressing escape
-nnoremap <CR> :noh<CR><CR>
-" NERDTree Toggle
-nmap <leader>b :NERDTreeTabsToggle<cr>
-" Tagbar
-nmap <F8> :TagbarToggle<CR>
 " CtrlP
 map <C-p> :CtrlP<cr>
-" better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-" Easy escaping to normal mode
-imap jj <esc>
-" Buffers
-noremap <silent> <C-h> :bnext<CR>
-noremap <silent> <C-l> :bprev<CR>
-" Close buffer use: ,w
-nmap <leader>w :bd<cr>
+
+" Numbers
+nnoremap <F3> :NumbersToggle<CR>
+
+" Trim trailing spaces, using local functions inside n/vimrc
+nnoremap <leader>ws :TrimWhiteSpace()<CR>
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme="gruvbox"
 
 
+"""""""""""""""""""""""""
 " Auto stuff
-"-----------
+"""""""""""""""""""""""""
 " Better Whitespace, automatically strip the whitespaces for the given file types
-autocmd FileType <php,javascript,html,css,sass,scss> autocmd BufWritePre <buffer> StripWhitespace
+" autocmd FileType <php,javascript,html,css,sass,scss> autocmd BufWritePre <buffer> StripWhitespace
 
+" NERDTree automatically when vim starts up if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
