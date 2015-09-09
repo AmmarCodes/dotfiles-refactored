@@ -55,6 +55,9 @@ Other than default i3 key bindings, There's:
 
 ### Additional Config
 
+#### NPM
+- Follow [this](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md) for installing global packages without sudo. note that zshrc stuff already done.
+
 #### PHP
 
 - Enable extensions by editing `/etc/php/php.ini`: curl, mysqli, posix, pdo_mysql, pdo_sqlite, sqlite3, openssl.
