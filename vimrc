@@ -7,6 +7,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'pbrisbin/vim-mkdir'
 " Plug 'itchyny/lightline.vim'
 Plug 'bling/vim-airline'
+Plug 'christoomey/vim-tmux-navigator'
 
 " colorschemes
 Plug 'morhetz/gruvbox'
@@ -22,6 +23,7 @@ Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler.vim'
 " Plug 'scrooloose/nerdtree'
 Plug 'mhinz/vim-startify'
+Plug 'nathanaelkane/vim-indent-guides'
 
 " Editing
 Plug 'junegunn/vim-easy-align',  { 'on': '<plug>(LiveEasyAlign)' }
