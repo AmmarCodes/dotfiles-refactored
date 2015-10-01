@@ -41,3 +41,6 @@ todos() {
     autoload colors; colors;
     echo "You have: ($fg_bold[red]`ag -i @todo . | wc -l`$fg[white]) todos left."
 }
+
+alias server="python -m http.server"
+
