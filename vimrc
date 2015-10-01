@@ -232,6 +232,8 @@ endfunction
 " Key-bindings
 """""""""""""""""""""""""
 
+" ; instead of shift+; to get the :
+nnoremap ;            :
 " Buffers
 nnoremap [b           :bprevious<cr>
 nnoremap ]b           :bnext<cr>
