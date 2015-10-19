@@ -86,11 +86,11 @@ rofi.bc: #1d1f21
 rofi.eh: 1
 rofi.bw: 0
 rofi.width: 40
-rofi.lines: 3
+rofi.lines: 4
 rofi.opacity:100
-rofi.terminal: urxvtc
-rofi.font: Terminus 8
-rofi.yoffset: -344
+rofi.terminal: xfce4-terminal
+rofi.font: Hack 10
+rofi.yoffset: -244
 
 !#include "/home/ammar/dotfiles/xresources/colorschemes/XresourceTomorrowNightEighties"
 #include "/home/ammar/dotfiles/xresources/colorschemes/gruvbox-dark.xresources"

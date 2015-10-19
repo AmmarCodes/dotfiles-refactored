@@ -5,28 +5,28 @@ set $mod Mod4
 set $dir ~/dotfiles/i3/
 
 # Colors
-
-set $black       #2c2836
-set $darkblack   #73707e
-set $red         #bb7473
-set $darkred     #cf9fa4
-set $green       #68b782
-set $darkgreen   #9acbad
-set $yellow      #abb773
-set $darkyellow  #c5cba4
-set $blue        #7865c5
-set $darkblue    #a396d9
-set $magenta     #bb65b6
-set $darkmagenta #cf96cf
-set $cyan        #68a8c5
-set $darkcyan    #9ac1d9
-set $white       #f1edfb
-set $darkwhite   #f1edfb
-set $background  #133B47
+set $background  #1d2021
+set $foreground  #ebdbb2
+set $black       #282828
+set $darkgrey    #928374
+set $darkred     #cc241d
+set $red         #fb4934
+set $darkgreen   #98971a
+set $green       #b8bb26
+set $darkyellow  #d79921
+set $yellow      #fabd2f
+set $darkblue    #458588
+set $blue        #83a598
+set $darkmagenta #b16286
+set $magenta     #d3869b
+set $darkcyan    #689d6a
+set $cyan        #8ec07c
+set $lightgrey   #a89984
+set $white       #ebdbb2
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Droid Sans Mono for Powerline 8
+font pango:Hack 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -168,20 +168,21 @@ bar {
     # mode hide
     # hidden_state hide
     modifier $mod
-    mode hide
+    mode dock
     status_command i3blocks # -c ~/dotfiles/i3blocks.conf
     position top
-    separator_symbol "|"
-    tray_output LVDS1 # Show the tray only on the main laptop monitor
-  colors {
-    separator #928374
-    background #282828
-    statusline #ebdbb2
-    focused_workspace #98971a #98971a #282828
-    active_workspace #282828 #282828 #ebdbb2
-    inactive_workspace #282828 #282828 #928374
-    urgent_workspace #fabd2f #fabd2f #ebdbb2
-  }
+    separator_symbol "/"
+    tray_output primary # Show the tray only on the main laptop monitor
+    colors {
+        background $background
+        statusline $foreground
+        separator $darkgrey
+
+        focused_workspace  $background $background $foreground
+        active_workspace   $background $background $foreground
+        inactive_workspace $background $background $darkgrey
+        urgent_workspace   $background $background $red
+    }
 }
 
 workspace_auto_back_and_forth yes
@@ -201,6 +202,9 @@ set $default_gaps_inner 8
 set $default_gaps_outer 2
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
+new_float  pixel 2
+new_window pixel 2
+hide_edge_borders       none
 
 set $mode_gaps Gaps: (o) outer, (i) inner, d|0
 set $mode_gaps_outer Outer Gaps: +|-|d|0 (local), Shift + +|-|d|0 (global)
@@ -248,7 +252,6 @@ mode "$mode_gaps_outer" {
 }
 
 popup_during_fullscreen smart
-new_window none
 
 # dialogs
 for_window [class="(?i)gsimplecal"] floating enable
@@ -295,6 +298,12 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 
+# load xresources
+exec --no-startup-id xrdb -merge ~/dotfiles/xresources/Xresources
+# detect dual monitor
+exec --no-startup-id ~/dotfiles/bin/dual-monitor.sh
+# Switch numlock on
+exec --no-startup-id numlockx on
 # Authentication Agent
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Network Applet
@@ -308,8 +317,7 @@ exec_always --no-startup-id ~/dotfiles/bin/set_bg
 # Lemonbar
 # exec_always --no-startup-id ~/dotfiles/bar/lemonbar.sh
 
-# Colorscheme - set using i3-style seti
-client.focused #458588 #458588 #282828 #282828
-client.focused_inactive #282828 #282828 #928374 #282828
-client.unfocused #282828 #282828 #928374 #282828
-client.urgent #282828 #fabd2f #ebdbb2 #cc241d
+client.focused          $foreground $foreground $background $foreground
+client.focused_inactive $darkgrey $darkgrey $foreground $darkgrey
+client.unfocused        $darkgrey $darkgrey $foreground $darkgrey
+client.urgent           $red $red $background $red
