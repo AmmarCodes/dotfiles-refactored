@@ -78,7 +78,7 @@ set background=dark
 colorscheme gruvbox
 set t_Co=256
 if has("gui_running")
-    set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 11
+    set guifont=Droid\ Sans\ Mono\ 11
     set guioptions-=T
     set nonu
     set linespace=3
