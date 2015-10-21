@@ -299,7 +299,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 ### Start applications in specific workspaces
 assign [class="google-chrome"] 1:web
-assign [class="sublime"] 2:editor
+assign [class="Subl3"] 2:editor
 assign [class="Xfce4-terminal"] 3:terminal
 assign [class="Vlc"] 4:media
 assign [class="Thunderbird"] 5:mail
@@ -311,6 +311,8 @@ exec --no-startup-id xrdb -merge ~/dotfiles/xresources/Xresources
 exec --no-startup-id ~/dotfiles/bin/dual-monitor.sh
 # Switch numlock on
 exec --no-startup-id numlockx on
+# Workrave
+exec --no-startup-id workrave
 # Authentication Agent
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Network Applet
