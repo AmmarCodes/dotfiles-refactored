@@ -42,5 +42,10 @@ todos() {
     echo "You have: ($fg_bold[red]`ag -i @todo . | wc -l`$fg[white]) todos left."
 }
 
+# bandwidth
+bt() {
+    wget http://cachefly.cachefly.net/100mb.test -O /dev/null
+}
+
 alias server="python -m http.server"
 
