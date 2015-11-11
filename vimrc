@@ -7,7 +7,6 @@ Plug 'tpope/vim-vinegar'
 Plug 'pbrisbin/vim-mkdir'
 " Plug 'itchyny/lightline.vim'
 Plug 'bling/vim-airline'
-Plug 'christoomey/vim-tmux-navigator'
 
 " colorschemes
 Plug 'morhetz/gruvbox'
