@@ -2,4 +2,5 @@ init-author-email=am.alakkad@gmail.com
 init-author-name=Ammar Alakkad
 init-license=MIT
 init-version=0.0.1
-prefix=${HOME}/.npm-packages
+prefix=/home/ammar/.npm-packages
+python=python2.7
