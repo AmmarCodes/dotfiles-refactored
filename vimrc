@@ -21,7 +21,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler.vim'
 " Plug 'scrooloose/nerdtree'
-Plug 'mhinz/vim-startify'
+" Plug 'mhinz/vim-startify'
 Plug 'nathanaelkane/vim-indent-guides'
 
 " Editing
