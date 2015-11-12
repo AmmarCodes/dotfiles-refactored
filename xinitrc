@@ -11,7 +11,7 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 xrdb -load /home/ammar/dotfiles/xresources/Xresources
 
-DEFAULT_SESSION=i3 #budgie-session
+DEFAULT_SESSION=gnome-session #i3 #budgie-session
 case $1 in
   xfce|xfce4 ) exec dbus-launch xfce4-session ;;
   budgie     ) exec dbus-launch budgie-session ;;
