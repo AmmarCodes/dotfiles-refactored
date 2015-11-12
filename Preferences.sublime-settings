@@ -5,7 +5,40 @@
 	"caret_extra_top": 2,
 	"caret_style": "phase",
 	"color_inactive_tabs": true,
-	"color_scheme": "Packages/User/SublimeLinter/gruvbox (SL).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Oceanic Next (SL).tmTheme",
+	"extra_file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace"
+	],
+	"extra_folder_exclude_patterns":
+	[
+		".git",
+		"tmp",
+		".bundle",
+		".sass-cache",
+		"node_modules",
+		".vagrant",
+		".idea"
+	],
 	"folder_exclude_patterns":
 	[
 		".git",
@@ -21,7 +54,7 @@
 	[
 		"gray_antialias"
 	],
-	"font_size": 11,
+	"font_size": 10,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
@@ -50,7 +83,7 @@
 	"scroll_past_end": true,
 	"scroll_speed": 5.0,
 	"shift_tab_unindent": true,
-	"theme": "Material-Theme-Darker.sublime-theme",
+	"theme": "Broceanic.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"update_check": false,
