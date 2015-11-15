@@ -74,6 +74,7 @@
 	"match_brackets_braces": true,
 	"match_brackets_content": true,
 	"match_brackets_square": true,
+	"material_theme_contrast_mode": true,
 	"material_theme_disable_fileicons": true,
 	"material_theme_disable_folder_animation": true,
 	"material_theme_panel_separator": true,
@@ -83,7 +84,11 @@
 	"scroll_past_end": true,
 	"scroll_speed": 5.0,
 	"shift_tab_unindent": true,
+<<<<<<< Updated upstream
 	"theme": "Broceanic.sublime-theme",
+=======
+	"theme": "Material-Theme.sublime-theme",
+>>>>>>> Stashed changes
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"update_check": false,
