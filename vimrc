@@ -39,10 +39,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/syntastic'
 Plug 'tomtom/tcomment_vim'
 Plug 'ervandew/supertab'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'mattn/emmet-vim', { 'on': ['php', 'html', 'css', 'scss']}
-Plug 'majutsushi/tagbar',
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'mattn/emmet-vim', { 'for': ['php', 'html', 'css', 'scss']}
+Plug 'majutsushi/tagbar'
+Plug 'soramugi/auto-ctags.vim'
+
+
 " Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
 Plug 'StanAngeloff/php.vim',     { 'for': 'php' }
 Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
@@ -70,6 +72,7 @@ let mapleader =','
 set backupdir=~/.nvim/backups
 set directory=~/.nvim/swaps
 set undodir=~/.nvim/undo
+set tags=~/.nvim/tags
 
 " colorscheme
 syntax on
