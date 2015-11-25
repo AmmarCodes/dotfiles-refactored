@@ -11,6 +11,8 @@ Plug 'bling/vim-airline'
 " colorschemes
 Plug 'morhetz/gruvbox'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'joshdick/onedark.vim'
+Plug 'joshdick/airline-onedark.vim'
 " Plug 'chriskempson/vim-tomorrow-theme'
 " Plug 'w0ng/vim-hybrid'
 " Plug 'yosiat/oceanic-next-vim'
@@ -77,7 +79,7 @@ set tags=~/.nvim/tags
 " colorscheme
 syntax on
 set background=dark
-colorscheme gruvbox
+colorscheme onedark
 set t_Co=256
 if has("gui_running")
     set guifont=Droid\ Sans\ Mono\ 11
@@ -299,7 +301,7 @@ nnoremap <leader>ws :TrimWhiteSpace()<CR>
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme="gruvbox"
+let g:airline_theme="onedark"
 
 
 """""""""""""""""""""""""
