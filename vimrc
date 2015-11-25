@@ -5,31 +5,33 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-vinegar'
 Plug 'pbrisbin/vim-mkdir'
-" Plug 'itchyny/lightline.vim'
 Plug 'bling/vim-airline'
+Plug 'sheerun/vim-polyglot'
+Plug 'vim-scripts/CSApprox'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'jiangmiao/auto-pairs'
+
 
 " colorschemes
-Plug 'morhetz/gruvbox'
-Plug 'NLKNguyen/papercolor-theme'
-" Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'vim-scripts/CSApprox'
+" Plug 'NLKNguyen/papercolor-theme'
+Plug 'altercation/vim-colors-solarized'
+" Plug 'morhetz/gruvbox'
 " Plug 'w0ng/vim-hybrid'
 " Plug 'yosiat/oceanic-next-vim'
-" Plug 'altercation/vim-colors-solarized'
 
 " Vim customization
-" Plug 'ap/vim-buftabline'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimfiler.vim'
 " Plug 'scrooloose/nerdtree'
-" Plug 'mhinz/vim-startify'
 Plug 'nathanaelkane/vim-indent-guides'
 
 " Editing
 Plug 'junegunn/vim-easy-align',  { 'on': '<plug>(LiveEasyAlign)' }
 Plug 'kien/ctrlp.vim', { 'on': ['CtrlP', 'CtrlPTag'] }
+Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'myusuf3/numbers.vim'
-Plug 'rstacruz/vim-closer'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -44,19 +46,29 @@ Plug 'mattn/emmet-vim', { 'for': ['php', 'html', 'css', 'scss']}
 Plug 'majutsushi/tagbar'
 Plug 'soramugi/auto-ctags.vim'
 
+Plug 'sheerun/vim-polyglot'
 
+""""""""""""""""" HTML
+Plug 'HTML-AutoCloseTag', { 'for': ['php', 'html'] }
+Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
+Plug 'cakebaker/scss-syntax.vim', { 'for': ['css', 'scss'] }
+" Plug 'othree/html5.vim', { 'for': ['php', 'html'] }
+Plug 'gorodinskiy/vim-coloresque', { 'for': ['css', 'scss'] }
+
+
+""""""""""""""""" JS
+" Plug 'pangloss/vim-javascript', { 'for': 'js' }
+" Plug 'jelera/vim-javascript-syntax', { 'for': 'js' }
+" Plug 'darthmall/vim-vue', { 'for': 'js' }
+" Plug 'juvenn/mustache.vim', { 'for': ['js', 'mustache'] }
+
+""""""""""""""""" PHP
 " Plug 'stephpy/vim-php-cs-fixer', { 'for': 'php' }
-Plug 'StanAngeloff/php.vim',     { 'for': 'php' }
+" Plug 'StanAngeloff/php.vim',     { 'for': 'php' }
 Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
 Plug 'dericofilho/vim-phpfmt', { 'for': 'php' }
-Plug 'HTML-AutoCloseTag', { 'for': ['php', 'html'] }
-Plug 'othree/html5.vim', { 'for': ['php', 'html'] }
-Plug 'cakebaker/scss-syntax.vim', { 'for': ['css', 'scss'] }
-Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
-Plug 'pangloss/vim-javascript', { 'for': 'js' }
-Plug 'jelera/vim-javascript-syntax', { 'for': 'js' }
-Plug 'darthmall/vim-vue', { 'for': 'js' }
-Plug 'juvenn/mustache.vim', { 'for': ['js', 'mustache'] }
+Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
+
 
 call plug#end()
 
@@ -66,18 +78,30 @@ call plug#end()
 """""""""""""""""""""""""
 let mapleader =','
 
+"" Encoding
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8
+
+"" Fix backspace indent
+set backspace=indent,eol,start
+
+
 " Set local directories
 "----------------------
-
+set nobackup
+set noswapfile
 set backupdir=~/.nvim/backups
 set directory=~/.nvim/swaps
 set undodir=~/.nvim/undo
 set tags=~/.nvim/tags
 
 " colorscheme
+"----------------------
 syntax on
-set background=dark
-colorscheme gruvbox
+set background=light
+colorscheme solarized
+let g:solarized_termcolors=256
 set t_Co=256
 if has("gui_running")
     set guifont=Droid\ Sans\ Mono\ 11
@@ -94,7 +118,6 @@ set autoread
 set incsearch       " Incremental search
 " mouse active only in normal and visual mode
 set mouse       =nv
-" set pastetoggle =<F2>
 set smartcase       " Case insensitive searches become sensitive with capitals
 set smarttab        " sw at the start of the line, sts everywhere else
 set shiftwidth  =4
@@ -109,6 +132,42 @@ set cursorline
 hi CursorLine   cterm=NONE ctermbg=NONE ctermfg=NONE
 set number
 set pastetoggle =<f2>
+
+
+let g:CSApprox_loaded = 1
+
+if $COLORTERM == 'gnome-terminal'
+  set term=gnome-256color
+else
+  if $TERM == 'xterm'
+    set term=xterm-256color
+  endif
+endif
+
+if &term =~ '256color'
+  set t_ut=
+endif
+
+"" Disable the blinking cursor.
+set gcr=a:blinkon0
+set scrolloff=3
+
+"" Status bar
+set laststatus=2
+
+"" Use modeline overrides
+set modeline
+set modelines=10
+
+set title
+set titleold="Terminal"
+set titlestring=%F
+
+
+
+"" Enable hidden buffers
+set hidden
+
 set noshowmode
 set shortmess=a " Reduce pressing enter when opening a file
 
@@ -147,6 +206,7 @@ let g:ctrlp_dont_split = 'nerdtree'
 let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'rtscript',
                           \ 'undo', 'line', 'changes', 'mixed', 'bookmarkdir']
 let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 if executable('ag')
     " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
     let g:ctrlp_user_command =
@@ -195,15 +255,34 @@ let g:lightline = {
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+
 
 " Syntastic
 let g:syntastic_php_checkers = ['php']
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_style_error_symbol = '✗'
+let g:syntastic_style_warning_symbol = '⚠'
+let g:syntastic_auto_loc_list=1
+let g:syntastic_aggregate_errors = 1
+
+"" Copy/Paste/Cut
+if has('unnamedplus')
+  set clipboard=unnamed,unnamedplus
+endif
+
+noremap YY "+y<CR>
+noremap <leader>p "+gP<CR>
+noremap XX "+x<CR>
 
 " vim-javascript
 let javascript_enable_domhtmlcss=1
 let b:javascript_fold=0
 
-" Mustache vim 
+" Mustache vim
 let g:mustache_abbreviations = 1
 
 " Emmet
@@ -297,9 +376,58 @@ nnoremap <F3> :NumbersToggle<CR>
 nnoremap <leader>ws :TrimWhiteSpace()<CR>
 
 " Airline
-let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme="solarized"
+let g:airline_theme = 'powerlineish'
 let g:airline_powerline_fonts = 1
-let g:airline_theme="gruvbox"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+if !exists('g:airline_powerline_fonts')
+  let g:airline#extensions#tabline#left_sep = ' '
+  let g:airline#extensions#tabline#left_alt_sep = '|'
+  let g:airline_left_sep          = '▶'
+  let g:airline_left_alt_sep      = '»'
+  let g:airline_right_sep         = '◀'
+  let g:airline_right_alt_sep     = '«'
+  let g:airline#extensions#branch#prefix     = '⤴' "➔, ➥, ⎇
+  let g:airline#extensions#readonly#symbol   = '⊘'
+  let g:airline#extensions#linecolumn#prefix = '¶'
+  let g:airline#extensions#paste#symbol      = 'ρ'
+  let g:airline_symbols.linenr    = '␊'
+  let g:airline_symbols.branch    = '⎇'
+  let g:airline_symbols.paste     = 'ρ'
+  let g:airline_symbols.paste     = 'Þ'
+  let g:airline_symbols.paste     = '∥'
+  let g:airline_symbols.whitespace = 'Ξ'
+else
+  let g:airline#extensions#tabline#left_sep = ''
+  let g:airline#extensions#tabline#left_alt_sep = ''
+
+  " powerline symbols
+  let g:airline_left_sep = ''
+  let g:airline_left_alt_sep = ''
+  let g:airline_right_sep = ''
+  let g:airline_right_alt_sep = ''
+  let g:airline_symbols.branch = ''
+  let g:airline_symbols.readonly = ''
+  let g:airline_symbols.linenr = ''
+endif
+
+
+"*****************************************************************************
+"" Abbreviations
+"*****************************************************************************
+"" no one is really happy until you have this shortcuts
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Qall! qall!
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Qall qall
 
 
 """""""""""""""""""""""""
