@@ -14,9 +14,11 @@ Plug 'jiangmiao/auto-pairs'
 
 " colorschemes
 Plug 'vim-scripts/CSApprox'
-" Plug 'NLKNguyen/papercolor-theme'
-Plug 'altercation/vim-colors-solarized'
-" Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'joshdick/onedark.vim'
+Plug 'joshdick/airline-onedark.vim'
+" Plug 'chriskempson/vim-tomorrow-theme'
 " Plug 'w0ng/vim-hybrid'
 " Plug 'yosiat/oceanic-next-vim'
 
@@ -99,9 +101,8 @@ set tags=~/.nvim/tags
 " colorscheme
 "----------------------
 syntax on
-set background=light
-colorscheme solarized
-let g:solarized_termcolors=256
+set background=dark
+colorscheme onedark
 set t_Co=256
 if has("gui_running")
     set guifont=Droid\ Sans\ Mono\ 11
@@ -376,7 +377,7 @@ nnoremap <F3> :NumbersToggle<CR>
 nnoremap <leader>ws :TrimWhiteSpace()<CR>
 
 " Airline
-let g:airline_theme="solarized"
+let g:airline_theme="onedark"
 let g:airline_theme = 'powerlineish'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
