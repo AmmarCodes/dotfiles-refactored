@@ -1,14 +1,15 @@
 !-------------------------------------------------------------------------------
+!
 ! Xft settings
 !-------------------------------------------------------------------------------
 
-Xft.dpi:                    96
-Xft.antialias:              true
-Xft.rgba:                   rgb
-Xft.hinting:                true
-Xft.hintstyle:              hintslight
-Xft.autohint:               false
-Xft.lcdfilter:              lcddefault
+Xft.dpi:                      96
+Xft.antialias:                true
+Xft.rgba:                     rgb
+Xft.hinting:                  true
+Xft.hintstyle:                hintfull
+Xft.autohint:                 false
+Xft.lcdfilter:                lcddefault
 
 !-------------------------------------------------------------------------------
 ! URxvt settings
@@ -18,82 +19,83 @@ Xft.lcdfilter:              lcddefault
 !-------------------------------------------------------------------------------
 
 ! URxvt.depth:                32
-URxvt.geometry:             65x15
-URxvt.transparent:          false
-URxvt.fading:               0
+URxvt.geometry:               100x30
+URxvt.transparent:            false
+URxvt.fading:                 0
 ! URxvt.urgentOnBell:         true
 ! URxvt.visualBell:           true
-URxvt.loginShell:           true
-URxvt.saveLines:            50
-URxvt.internalBorder:       0
-URxvt.lineSpace:            4
-URxvt.iconFile:             /usr/share/icons/UltraFlatIcons/apps/scalable/terminal.svg
-URxvt.title:                Terminal
-XTerm*termName: xterm-256color
-URxvt*termName: xterm-256color
+URxvt.loginShell:             true
+URxvt.saveLines:              56
+URxvt.internalBorder:         0
+URxvt.lineSpace:              2
+URxvt.iconFile:               /usr/share/icons/UltraFlatIcons/apps/scalable/terminal.svg
+URxvt.title:                  Terminal
+XTerm*termName:               xterm-256color
+URxvt*termName:               xterm-256color
 
 ! Fonts
-URxvt.allow_bold:           false
+URxvt.allow_bold:             false
+! This disables the bold font
+urxvt*boldFont:
 /*URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1*/
-URxvt*font:               xft:Droid Sans Mono for Powerline:size=11:hinting=true, xft:DejaVu Sans Mono
-URxvt.font-size.zoomfont: xft:Droid Sans Mono for Powerline:pixelsize=8, xft:DejaVu Sans Mono
-URxvt.font-size.step: 2
-URxvt.keysym.C-Up:   perl:font-size:increase
-URxvt.keysym.C-Down: perl:font-size:decrease
+URxvt*font:                   xft:Hack:size=10,xft:Droid Sans Mono for Powerline:size=12, xft:DejaVu Sans Mono
+URxvt.font-size.zoomfont:     xft:Droid Sans Mono for Powerline:pixelsize=8, xft:DejaVu Sans Mono
+URxvt.font-size.step:         2
+URxvt.keysym.C-Up:            perl:font-size:increase
+URxvt.keysym.C-Down:          perl:font-size:decrease
 
 ! Fix font space
-URxvt*letterSpace: -1
+URxvt*letterSpace:            -1
 
 ! Scrollbar
-URxvt.scrollStyle:          rxvt
-URxvt.scrollBar:            false
+URxvt.scrollBar:              false
 
 ! Perl extensions
-Urxvt*perl-lib:        /usr/lib/urxvt/perl/
-URxvt.perl-ext-common:      default,matcher,fullscreen,font-size,clipboard
-URxvt.matcher.button:       1
-URxvt.urlLauncher:          xdg-open
-URxvt.urlButton: 1
-URxvt.underlineURLs: True
+Urxvt*perl-lib:               /usr/lib/urxvt/perl/
+URxvt.perl-ext-common:        default,matcher,fullscreen,font-size,clipboard
+URxvt.matcher.button:         1
+URxvt.urlLauncher:            xdg-open
+URxvt.urlButton:              1
+URxvt.underlineURLs:          True
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.clipboard.copycmd:  xsel -ib
-URxvt.clipboard.pastecmd: xsel -ob
+URxvt.clipboard.copycmd:      xsel -ib
+URxvt.clipboard.pastecmd:     xsel -ob
 
 ! Fullscreen switch
-URxvt.keysym.F11:       perl:fullscreen:switch
+URxvt.keysym.F11:             perl:fullscreen:switch
 
 ! Disable Ctrl+Shift iso boring stuff
- URxvt.iso14755: false
- URxvt.iso14755_52: false
+ URxvt.iso14755:              false
+ URxvt.iso14755_52:           false
 
 
 ! Cursor
-URxvt.cursorBlink:          true
-URxvt.cursorColor:          #657b83
-URxvt.cursorUnderline:      false
+URxvt.cursorBlink:            true
+URxvt.cursorColor:            #657b83
+URxvt.cursorUnderline:        false
 
 ! Pointer
-URxvt.pointerBlank:         true
-urxvt*internalBorder: 5
-URxvt*dynamicColors: on
-URxvt*keysym.Home: \033[1~
-URxvt*keysym.End: \033[4~
+URxvt.pointerBlank:           true
+urxvt*internalBorder:         5
+URxvt*dynamicColors:          on
+URxvt*keysym.Home:            \033[1~
+URxvt*keysym.End:             \033[4~
 
 ! Rofi config
-rofi.bg: #1d1f21
-rofi.fg: #c5c8c6
-rofi.hlbg: #2d2f31
-rofi.hlfg: #b294bb
-rofi.bc: #1d1f21
-rofi.eh: 1
-rofi.bw: 0
-rofi.width: 40
-rofi.lines: 4
-rofi.opacity:100
-rofi.terminal: xfce4-terminal
-rofi.font: Hack 10
-rofi.yoffset: -244
+rofi.bg:                      #1d1f21
+rofi.fg:                      #c5c8c6
+rofi.hlbg:                    #2d2f31
+rofi.hlfg:                    #b294bb
+rofi.bc:                      #1d1f21
+rofi.eh:                      1
+rofi.bw:                      0
+rofi.width:                   40
+rofi.lines:                   4
+rofi.opacity:                 100
+rofi.terminal:                xfce4-terminal
+rofi.font:                    Hack 10
+rofi.yoffset:                 -244
 
 #include "/home/ammar/dotfiles/xresources/colorschemes/XresourceTomorrowNightEighties"
 !#include "/home/ammar/dotfiles/xresources/colorschemes/base16-solarized.light.xresources"
